@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { SocialIcon } from 'react-social-icons'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { SocialIcon } from 'react-social-icons';
+import { motion } from 'framer-motion';
 
-type Props = {}
+type Props = {};
 
-function Header({ }: Props) {
+function Header({}: Props) {
     return (
         <header className='
                 sticky top-0 flex items-start justify-between 
@@ -70,7 +70,7 @@ function Header({ }: Props) {
                 </p>
             </motion.div>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;
