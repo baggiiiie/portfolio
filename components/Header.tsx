@@ -3,6 +3,7 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -30,21 +31,23 @@ function Header({}: Props) {
                 className='flex flex-row items-center'
             >
                 <SocialIcon
-                    url='https://www.youtube.com'
+                    url='https://www.linkedin.com'
                     fgColor='white'
                     bgColor='transparent'
                 />
                 <SocialIcon
-                    url='https://www.twitter.com'
+                    url='https://www.github.com/baggiiiie'
                     fgColor='white'
                     bgColor='transparent'
                 />
                 <SocialIcon
-                    url='https://www.youtube.com'
+                    url='https://www.instagram.com/baggiiiie'
                     fgColor='white'
                     bgColor='transparent'
                 />
             </motion.div>
+
+            {/* <Link href='#contact'> */}
             <motion.div
                 initial={{
                     x: 500,
@@ -69,6 +72,7 @@ function Header({}: Props) {
                     Get in touch!
                 </p>
             </motion.div>
+            {/* </Link> */}
         </header>
     );
 }

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { describe } from 'node:test';
 
 type Props = {};
 
@@ -30,10 +29,14 @@ function Projects({}: Props) {
             <div className='
                 relative w-full
                 flex overflow-x-scroll overflow-y-hidden 
-                snap-x snap-mandatory z-20'
-            >
+                snap-x snap-mandatory z-20
+                scrollbar scrollbar-track-gray-400/20
+                scrollbar-thumb-slate-300
+            '>
                 {projects.map((project, i) =>
-                    <div className='
+                    <div
+                        key={i}
+                        className='
                         w-screen h-screen
                         flex flex-col flex-shrink-0
                         snap-center items-center justify-center
