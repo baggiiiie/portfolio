@@ -28,9 +28,11 @@ function Experience({}: Props) {
             </h3>
             <div className='
                 w-full flex space-x-5 overflow-x-scroll 
-                p-10 snap-x snap-mandatory 
-                scrollbar scrollbar-track-gray-400/20
-                scrollbar-thumb-slate-300'>
+                m-auto mt-40 px-[40%] snap-x snap-mandatory 
+                h-3/4 max-h-[600px] min-h-[400px]
+                scrollbar-none
+            '>
+                {/* scrollbar is removed, add a page indicator? e.g., 1/3 */}
                 <ExperienceCard />
                 <ExperienceCard />
                 <ExperienceCard />
