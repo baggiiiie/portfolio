@@ -22,7 +22,7 @@ export default function Hero({}: Props) {
             <BackgroundCircle />
             <img
                 className='relative rounded-full h-20 w-20 mx-auto object-cover'
-                src='https://static.vecteezy.com/system/resources/previews/018/930/572/original/youtube-logo-youtube-icon-transparent-free-png.png' alt='profile pic' />
+                src='sticker.png' alt='profile pic' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
                     Software Engineer
@@ -32,16 +32,16 @@ export default function Hero({}: Props) {
                     <Cursor />
                 </h1>
                 <div className='pt-5'>
-                    <Link href=''>
+                    <Link href='#about'>
                         <button className='heroButton'>About</button>
                     </Link>
-                    <Link href=''>
-                        <button className='heroButton'>Experience</button>
+                    <Link href='#experiences'>
+                        <button className='heroButton'>Experiences</button>
                     </Link>
-                    <Link href=''>
+                    <Link href='#skills'>
                         <button className='heroButton'>Skills</button>
                     </Link>
-                    <Link href=''>
+                    <Link href='#projects'>
                         <button className='heroButton'>Projects</button>
                     </Link>
                     <Link href=''>
