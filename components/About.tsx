@@ -14,8 +14,10 @@ function About({}: Props) {
             h-screen relative
             flex flex-col md:flex-row
             text-center md:text-left
-            max-w-7xl px-10 justify-evenly mx-auto items-center
+            max-w-7xl justify-evenly mx-auto items-center
+            z-0
         '>
+            <div className='w-full absolute bg-gradient-to-l from-slate-300 top-[30%] left-0 h-[500px] skew-y-12 -z-10' />
             <h3 className='
                 absolute top-24 uppercase tracking-[20px]
                 text-gray-500 text-2xl

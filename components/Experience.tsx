@@ -18,7 +18,9 @@ function Experience({}: Props) {
             text-left
             max-w-full px-10 mx-auto
             justify-evenly items-center
+            z-0
         '>
+            <div className='w-full absolute bg-gradient-to-l from-slate-300 to-slate-500 top-[30%] left-0 h-[500px] -skew-y-12 -z-10' />
             <h3 className='
                 absolute top-24 uppercase
                 tracking-[20px]

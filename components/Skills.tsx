@@ -18,6 +18,7 @@ function Skills({}: Props) {
             mx-auto 
             '
         >
+            <div className='w-full absolute bg-gray-500 top-[30%] left-0 h-[500px] skew-y-12 ' />
             <h3 className='
                 absolute top-24 uppercase
                 tracking-[20px]

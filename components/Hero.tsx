@@ -18,14 +18,14 @@ export default function Hero({}: Props) {
 
     return (
         <div className='h-screen flex flex-col space-y-8 items-center justify-center
-        text-center overflow-hidden'>
+        text-center overflow-hidden mt-[-30px]'>
             <BackgroundCircle />
             <img
                 className='relative rounded-full h-20 w-20 mx-auto object-cover'
                 src='sticker.png' alt='profile pic' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
-                    Software Engineer
+                    my personal space
                 </h2>
                 <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                     <span>{text}</span>

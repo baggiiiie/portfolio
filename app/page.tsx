@@ -11,7 +11,7 @@ export default function Home() {
 	return (
 		<main
 			className='
-			bg-[rgb(36,36,36)] text-white h-screen
+			bg-[rgb(36,36,36)] 2text-white h-screen
 			snap-y snap-mandatory
 			overflow-y-scroll overflow-x-hidden
 			z-0
@@ -21,27 +21,27 @@ export default function Home() {
 
 			<Header />
 
-			<section id='hero' >
+			<section id='hero' className='snap-mandatory snap-start'>
 				<Hero />
 			</section>
 
-			<section id='about' >
+			<section id='about' className='snap-mandatory snap-start'>
 				<About />
 			</section>
 
-			<section id='experiences' >
+			<section id='experiences' className='snap-mandatory snap-start'>
 				<Experience />
 			</section>
 
-			<section id='skills' >
+			<section id='skills' className='snap-mandatory snap-start'>
 				<Skills />
 			</section>
 
-			<section id='projects' >
+			<section id='projects' className='snap-mandatory snap-start'>
 				<Projects />
 			</section>
 
-			<section id='contact' >
+			<section id='contact' className='snap-mandatory snap-start'>
 				<Contact />
 			</section>
 
