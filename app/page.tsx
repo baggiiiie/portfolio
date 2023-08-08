@@ -12,7 +12,7 @@ export default function Home() {
 		<main
 			className='
 			bg-[rgb(36,36,36)] 2text-white h-screen
-			snap-y snap-mandatory
+			snap-y  
 			overflow-y-scroll overflow-x-hidden
 			z-0
 			scrollbar scrollbar-track-gray-400/20
@@ -21,27 +21,27 @@ export default function Home() {
 
 			<Header />
 
-			<section id='hero' className='snap-mandatory snap-start'>
+			<section id='hero' className='individualPage'>
 				<Hero />
 			</section>
 
-			<section id='about' className='snap-mandatory snap-start'>
+			<section id='about' className='individualPage'>
 				<About />
 			</section>
 
-			<section id='experiences' className='snap-mandatory snap-start'>
+			<section id='experiences' className='individualPage'>
 				<Experience />
 			</section>
 
-			<section id='skills' className='snap-mandatory snap-start'>
+			<section id='skills' className='individualPage'>
 				<Skills />
 			</section>
 
-			<section id='projects' className='snap-mandatory snap-start'>
+			<section id='projects' className='individualPage'>
 				<Projects />
 			</section>
 
-			<section id='contact' className='snap-mandatory snap-start'>
+			<section id='contact' className='individualPage'>
 				<Contact />
 			</section>
 

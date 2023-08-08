@@ -27,39 +27,45 @@ body {
 }
 
 @layer components {
-  .heroButton {
-    @apply
-    px-6 py-2
-    border border-[#242424] rounded-full
-    uppercase text-sm text-gray-500
-    transition-all ease-in-out duration-500
-    tracking-widest 
-    hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40
-  }
-  .contactInput {
-    @apply 
-	outline-none bg-slate-400/10 
-	rounded-sm border-b border-[#242424]
-	px-6 py-4 
-  text-gray-500 placeholder-gray-500 
-	transition-all 
-	focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 
-	hover:border-[#F7AB0A]/40
-  }
-  .pageTitle {
-    @apply 
-	absolute top-24 
-	uppercase text-gray-500 text-2xl
-	tracking-[20px]
-  }
-  .pageDiv {
-	@apply
-	relative h-screen
-	flex flex-col md:flex-row
-	overflow-hidden
-	text-left 
-	max-w-full
-	justify-evenly mx-auto items-center
-	z-0
-  }
+	.individualPage {
+		@apply
+		md:snap-center sm:snap-none
+	}
+	.heroButton {
+		@apply
+		px-6 py-2
+		border border-[#242424] rounded-full
+		uppercase text-sm text-gray-500
+		transition-all ease-in-out duration-500
+		tracking-widest 
+		hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40
+	}
+	.contactInput {
+		@apply 
+		outline-none bg-slate-400/10 
+		rounded-sm border-b border-[#242424]
+		px-6 py-4 
+	text-gray-500 placeholder-gray-500 
+		transition-all 
+		focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 
+		hover:border-[#F7AB0A]/40
+	}
+	.pageDiv {
+		@apply
+		relative 
+		h-screen min-h-[500px]
+		flex flex-col
+		overflow-hidden
+		text-left 
+		max-w-full
+		justify-evenly mx-auto items-center
+		z-0
+	}
+	.pageTitle {
+		@apply 
+		absolute top-[15%] 
+		/* relative mt-28 */
+		uppercase text-gray-500 text-2xl
+		tracking-[20px]
+	}
 }

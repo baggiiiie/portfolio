@@ -15,13 +15,17 @@ function Experience({}: Props) {
             <div className='w-full absolute bg-gradient-to-l from-slate-300 to-slate-500 top-[30%] left-0 h-[500px] -skew-y-12 -z-10' />
             <h3 className='pageTitle'>Experiences</h3>
             <div className='
+                absolute m-auto 
+                left-0 right-0 bottom-0 top-[10%]
                 w-3/4 h-4/5
-                m-auto
+                items-center
             '>
                 <div className='
+            
+                absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+
                 w-full flex space-x-5 overflow-x-scroll 
-                m-auto mt-40 px-[40%] snap-x snap-mandatory 
-                h-3/4 max-h-[600px] min-h-[400px]
+                 px-[40%] snap-x snap-mandatory 
                 scrollbar-thin scrollbar-track-gray-400/20
                 scrollbar-thumb-slate-300
             '>
