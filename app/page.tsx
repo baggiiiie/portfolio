@@ -47,7 +47,7 @@ export default function Home() {
 
 			<Link href='#hero'>
 				<footer className='sticky bottom-5 w-full cursor-pointer'>
-					<div className='flex items-center justify-center'>
+					<div className='flex items-center justify-center sm:justify-end'>
 						<img
 							className='h-5 w-5 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
 							src="sticker.png" alt="Footer" />

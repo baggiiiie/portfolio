@@ -18,8 +18,8 @@ export default function Hero({}: Props) {
 
     return (
         <div className='
-            pageDiv space-y-8 justify-center
-            text-center mt-[-30px] flex-col
+            pageDiv
+            text-center mt-[-30px]
         '>
             <BackgroundCircle />
             <img

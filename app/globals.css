@@ -29,7 +29,59 @@ body {
 @layer components {
 	.individualPage {
 		@apply
-		md:snap-center sm:snap-none
+		snap-start
+		pb-20 mb-10
+	}
+	.pageDiv {
+		@apply
+		relative 
+		/* h-screen min-h-[500px] */
+		min-h-screen
+		flex flex-col flex-shrink-0
+		overflow-hidden
+		text-left 
+		max-w-full
+		justify-center  space-y-8  
+		mx-auto items-center
+		z-0
+	}
+	.pageTitle {
+		@apply 
+		/* absolute top-[15%]  */
+		relative 
+		mt-[15vh]
+		uppercase text-gray-500
+		text-2xl
+		md:tracking-[20px]
+		tracking-[10px]
+		z-10
+	}
+	.pageContent {
+		@apply
+		relative m-auto 
+		w-3/4 min-h-[70vh] xl:h-[60vh]
+		items-center
+		justify-center
+	}
+	.horizontalScroll {
+		@apply
+		/* absolute top-1/2 -translate-y-1/2 */
+		relative
+		w-full flex 
+		space-x-10
+		overflow-x-scroll 
+		px-[40%] snap-x 
+		scrollbar-thin scrollbar-track-gray-400/20
+		scrollbar-thumb-slate-300
+	}
+	.experienceCard {
+		@apply
+		flex flex-col space-y-7 flex-shrink-0
+		px-5 py-10 mb-5 md:px-10
+		items-center snap-center 
+		w-[50vw] lg:w-[33vw] max-w-[800px] md:min-w-[400px] sm:min-w-min
+		opacity-40 hover:opacity-100 transition-opacity duration-200
+		rounded-lg cursor-pointer overflow-hidden bg-[#5e5e5e] 
 	}
 	.heroButton {
 		@apply
@@ -49,23 +101,5 @@ body {
 		transition-all 
 		focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 
 		hover:border-[#F7AB0A]/40
-	}
-	.pageDiv {
-		@apply
-		relative 
-		h-screen min-h-[500px]
-		flex flex-col
-		overflow-hidden
-		text-left 
-		max-w-full
-		justify-evenly mx-auto items-center
-		z-0
-	}
-	.pageTitle {
-		@apply 
-		absolute top-[15%] 
-		/* relative mt-28 */
-		uppercase text-gray-500 text-2xl
-		tracking-[20px]
 	}
 }

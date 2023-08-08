@@ -10,7 +10,6 @@ function Skills({}: Props) {
         <motion.div
             className='pageDiv'
         >
-            <div className='w-full absolute bg-gray-500 top-[30%] left-0 h-[500px] skew-y-12 ' />
             <h3 className='pageTitle'>Skills</h3>
             <h3 className='absolute top-36 uppercase
                 text-gray-500 text-sm'
