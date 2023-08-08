@@ -17,8 +17,10 @@ export default function Hero({}: Props) {
     });
 
     return (
-        <div className='h-screen flex flex-col space-y-8 items-center justify-center
-        text-center overflow-hidden mt-[-30px]'>
+        <div className='
+            pageDiv space-y-8 justify-center
+            text-center mt-[-30px] flex-col
+        '>
             <BackgroundCircle />
             <img
                 className='relative rounded-full h-20 w-20 mx-auto object-cover'

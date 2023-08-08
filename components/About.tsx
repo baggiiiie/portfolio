@@ -18,12 +18,7 @@ function About({}: Props) {
             z-0
         '>
             <div className='w-full absolute bg-gradient-to-l from-slate-300 top-[30%] left-0 h-[500px] skew-y-12 -z-10' />
-            <h3 className='
-                absolute top-24 uppercase tracking-[20px]
-                text-gray-500 text-2xl
-            '>
-                About
-            </h3>
+            <h3 className='pageTitle'>About</h3>
 
             <motion.img
                 className="

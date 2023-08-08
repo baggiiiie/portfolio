@@ -22,21 +22,9 @@ function Contact({}: Props) {
 
 
     return (
-        <div className='
-            h-screen relative 
-            flex flex-col
-            text-center md:text-left md:flex-row
-            max-w-7xl px-10
-            justify-evenly mx-auto items-center
-        '>
-            <h3 className='
-                absolute top-24 uppercase
-                tracking-[20px] text-2xl
-                text-gray-500
-            '>
-                Contact
-            </h3>
-            <div className="flex flex-col space-y-10">
+        <div className='pageDiv'>
+            <h3 className='pageTitle'>Contact</h3>
+            <div className="m-auto flex flex-col space-y-10">
                 <h4 className="text-4xl font-semibold text-center">
                     I have got just what you need. &nbsp;
                     <span className=" decoration-[#F7ABOA]/50 underline">Lets talk.</span>

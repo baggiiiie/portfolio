@@ -12,25 +12,13 @@ function Projects({}: Props) {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
 
-            className=' relative h-screen
-            flex flex-col overflow-hidden
-            text-left md:flex-row
-            max-w-full
-            justify-evenly mx-auto items-center
-            z-0
-        '>
-            <h3 className='
-                absolute top-24
-                uppercase text-gray-500 text-2xl
-                tracking-[20px]
-            '>
-                Projects
-            </h3>
+            className='pageDiv'>
+            <h3 className='pageTitle'>Projects</h3>
             <div className='
                 relative w-full
                 flex overflow-x-scroll overflow-y-hidden 
                 snap-x snap-mandatory z-20
-                scrollbar scrollbar-track-gray-400/20
+                scrollbar-thin scrollbar-track-gray-400/20
                 scrollbar-thumb-slate-300
             '>
                 {projects.map((project, i) =>
