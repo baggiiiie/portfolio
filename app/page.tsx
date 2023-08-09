@@ -33,9 +33,9 @@ export default function Home() {
 				<Experience />
 			</section>
 
-			<section id='skills' className='individualPage'>
+			{/* <section id='skills' className='individualPage'>
 				<Skills />
-			</section>
+			</section> */}
 
 			<section id='projects' className='individualPage'>
 				<Projects />

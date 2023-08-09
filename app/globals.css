@@ -59,29 +59,9 @@ body {
 	.pageContent {
 		@apply
 		relative m-auto 
-		w-3/4 min-h-[70vh] xl:h-[60vh]
+		max-w-[75%] min-h-[70vh] xl:min-h-[60vh]
 		items-center
 		justify-center
-	}
-	.horizontalScroll {
-		@apply
-		/* absolute top-1/2 -translate-y-1/2 */
-		relative
-		w-full flex 
-		space-x-10
-		overflow-x-scroll 
-		px-[40%] snap-x 
-		scrollbar-thin scrollbar-track-gray-400/20
-		scrollbar-thumb-slate-300
-	}
-	.experienceCard {
-		@apply
-		flex flex-col space-y-7 flex-shrink-0
-		px-5 py-10 mb-5 md:px-10
-		items-center snap-center 
-		w-[50vw] lg:w-[33vw] max-w-[800px] md:min-w-[400px] sm:min-w-min
-		opacity-40 hover:opacity-100 transition-opacity duration-200
-		rounded-lg cursor-pointer overflow-hidden bg-[#5e5e5e] 
 	}
 	.heroButton {
 		@apply
@@ -92,12 +72,64 @@ body {
 		tracking-widest 
 		hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40
 	}
+	.horizontalScroll {
+		@apply
+		/* absolute top-1/2 -translate-y-1/2 */
+		relative
+		w-full flex 
+		space-x-10
+		overflow-x-scroll 
+		px-[40%] snap-x 
+		scrollbar-thin scrollbar-track-transparent
+		scrollbar-thumb-slate-300
+	}
+	.experienceCard {
+		@apply
+		flex flex-col space-y-7 flex-shrink-0
+		px-5 py-10 mb-5
+		items-center snap-center 
+		w-[40vw] lg:w-[20vw] max-w-[800px] md:min-w-[400px] sm:min-w-max
+		opacity-40 hover:opacity-100 transition-opacity duration-200
+		rounded-lg bg-[#5e5e5e] 
+	}
+	.projectCard {
+		@apply
+		relative m-auto
+		h-full w-full
+		rounded-xl
+		transition-all duration-500
+		shadow-lg
+  		[transform-style:preserve-3d] 
+		group-hover:[transform:rotateY(180deg)]
+	}
+	.projectCardFront {
+		@apply
+		absolute
+		inset-1 rounded-xl
+		[backface-visibility:hidden]
+		bg-slate-500
+	}
+	.projectCardFrontImg {
+		@apply
+		relative 
+		h-4/5 w-4/5 m-auto
+		rounded-xl object-cover 
+	}
+	.projectCardBack {
+		@apply
+		absolute 
+		inset-1 rounded-xl
+		[transform:rotateY(180deg)]
+    	[backface-visibility:hidden]
+  		bg-slate-600/80 text-slate-200 
+		text-center 
+	}
 	.contactInput {
 		@apply 
 		outline-none bg-slate-400/10 
 		rounded-sm border-b border-[#242424]
 		px-6 py-4 
-	text-gray-500 placeholder-gray-500 
+		text-gray-500 placeholder-gray-500 
 		transition-all 
 		focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 
 		hover:border-[#F7AB0A]/40

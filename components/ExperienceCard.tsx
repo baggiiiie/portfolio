@@ -38,7 +38,7 @@ function ExperienceCard({}: Props) {
                     Started work... <br />
                     Ended ...
                 </p>
-                <ul className='hidden md:inline-block list-disc space-y-1 ml-5 text-lg'>
+                <ul className='md:inline-block list-disc space-y-1 ml-5 text-lg'>
                     <li>
                         something something here
                     </li>

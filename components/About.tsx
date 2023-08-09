@@ -13,14 +13,14 @@ function About({}: Props) {
             className='pageDiv'>
             <h3 className='pageTitle'>About</h3>
             <div className='relative
-            flex flex-col
-            md:flex-row
-            text-center md:text-left
-            max-w-7xl '>
+                flex flex-col
+                md:flex-row
+                text-center md:text-left
+                max-w-7xl '>
                 <motion.img
-                    className=" m-auto mb-10 
-                 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full
-                object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px]"
+                    className="m-auto mb-10 
+                    md:mb-0 flex-shrink-0 w-56 h-56 rounded-full
+                    object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px]"
                     initial={{
                         x: -200,
                         opacity: 0,
