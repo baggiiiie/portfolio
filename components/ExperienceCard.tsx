@@ -34,11 +34,11 @@ function ExperienceCard({}: Props) {
                         className='h-10 w-10 rounded-full'
                         src="sticker.png" alt="Skills Picture" />
                 </div>
-                <p className='uppercase py-5 text-gray-300'>
+                <p className='uppercase py-5 text-gray-300 text-sm'>
                     Started work... <br />
                     Ended ...
                 </p>
-                <ul className='md:inline-block list-disc space-y-1 ml-5 text-lg'>
+                <ul className='hidden md:inline-block list-disc space-y-1 ml-5 text-lg'>
                     <li>
                         something something here
                     </li>

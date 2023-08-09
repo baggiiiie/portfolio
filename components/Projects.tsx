@@ -18,6 +18,8 @@ function Projects({}: Props) {
             <h3 className='pageTitle'>Projects</h3>
             <div className='pageContent'>
                 <div className='
+                    relative
+                    w-full
                     grid gap-5 
                     max-[500px]:grid-cols-1 grid-cols-2 lg:grid-cols-3 
                     pb-10 lg:pb-20
