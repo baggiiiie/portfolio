@@ -15,7 +15,7 @@ function ProjectCard({}: Props) {
                             <h1 className='text-3xl font-bold'>something</h1>
                             <p className='text-lg'>something</p>
                             <p className='text-base'>something</p>
-                            <button className='mt-2 rounded-md bg-neutral-800 py-1 px-2 text-sm hover:bg-neutral-900'>read more</button>
+                            <a href='https://www.google.com' className='heroButton'>Have a look</a>
                         </div>
                     </div>
                 </div>

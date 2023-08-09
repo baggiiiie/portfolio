@@ -68,9 +68,9 @@ function Header({}: Props) {
                     fgColor='white'
                     bgColor='transparent'
                 />
-                <p className='hidden md:inline-flex text-sm text-gray-400'>
+                <a href='#contact'><p className='hidden md:inline-flex text-sm text-gray-400'>
                     Get in touch!
-                </p>
+                </p></a>
             </motion.div>
             {/* </Link> */}
         </header>

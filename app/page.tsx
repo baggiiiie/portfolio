@@ -45,15 +45,15 @@ export default function Home() {
 				<Contact />
 			</section>
 
-			<Link href='#hero'>
-				<footer className='sticky bottom-5 w-full cursor-pointer'>
+			{/* <Link href='#hero'>
+				<footer className='sticky bottom-5 cursor-pointer'>
 					<div className='flex items-center justify-center sm:justify-end'>
 						<img
-							className='h-5 w-5 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+							className='h-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
 							src="sticker.png" alt="Footer" />
 					</div>
 				</footer>
-			</Link>
+			</Link> */}
 		</main>
 	);
 }

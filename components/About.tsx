@@ -11,7 +11,7 @@ function About({}: Props) {
             whileInView={{ opacity: 1, }}
             transition={{ duration: 1.5 }}
             className='pageDiv'>
-            <h3 className='pageTitle'>About</h3>
+            <h3 className='pageTitle md:mt-0'>About</h3>
             <div className='relative
                 flex flex-col
                 md:flex-row

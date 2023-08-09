@@ -11,8 +11,9 @@ export default function Hero({}: Props) {
         words: [
             "So you've found my website",
             "Well, welcome i guess",
+            "Have a look around",
         ],
-        loop: true,
+        loop: 1,
         delaySpeed: 2000,
     });
 

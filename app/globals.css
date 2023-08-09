@@ -134,4 +134,10 @@ body {
 		focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 
 		hover:border-[#F7AB0A]/40
 	}
+	.contactButton {
+		@apply
+		bg-[#f7ab0a]
+		py-5 px-10 rounded-md 
+		text-black font-bold text-lg
+	}
 }

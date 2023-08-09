@@ -55,7 +55,7 @@ function Contact({}: Props) {
                         </div>
                         <input {...register('email')} className='contactInput' type="email" placeholder='Email' />
                         <textarea {...register('message')} className='contactInput' placeholder='Message' />
-                        <button className='bg-[#f7ab0a] py-5 px-10 rounded-md text-black font-bold text-lg'>
+                        <button className='contactButton'>
                             Submit
                         </button>
                     </form>

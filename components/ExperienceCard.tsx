@@ -20,7 +20,7 @@ function ExperienceCard({}: Props) {
                 src='sticker.png'
                 alt='Experience Picture'
             />
-            <div className='px-0 md:px-10'>
+            <div className='px-3 md:px-10'>
                 <h4 className='font-bold sm:text-2xl md:text-4xl'>Position</h4>
                 <p className='sm:text-xl md:text-2xl mt-1 '>Some info here</p>
                 <div className='hidden md:flex space-x-2 my-2'>
