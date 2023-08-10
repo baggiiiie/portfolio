@@ -36,6 +36,7 @@ body {
 		@apply
 		relative 
 		/* h-screen min-h-[500px] */
+		pt-16
 		min-h-screen
 		flex flex-col flex-shrink-0
 		overflow-hidden
@@ -49,7 +50,7 @@ body {
 		@apply 
 		/* absolute top-[15%]  */
 		relative 
-		mt-[15vh]
+		/* mt-[50px] */
 		uppercase text-gray-500
 		text-2xl
 		md:tracking-[20px]
@@ -59,7 +60,7 @@ body {
 	.pageContent {
 		@apply
 		relative m-auto 
-		max-w-[75%] min-h-[70vh] xl:min-h-[60vh]
+		max-w-[75%]
 		items-center
 		justify-center
 	}

@@ -12,7 +12,8 @@ function About({}: Props) {
             transition={{ duration: 1.5 }}
             className='pageDiv'>
             <h3 className='pageTitle md:mt-0'>About</h3>
-            <div className='relative
+            <div className='
+                pageContent
                 flex flex-col
                 md:flex-row
                 text-center md:text-left
