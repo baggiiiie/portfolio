@@ -24,13 +24,13 @@ function Contact({}: Props) {
     return (
         <div className='pageDiv'>
             <h3 className='pageTitle'>Contact</h3>
-            <div className="m-auto flex flex-col space-y-10">
+            <div className="m-auto flex flex-col space-y-10 pageContent justify-start">
                 <h4 className="text-4xl font-semibold text-center">
                     I have got just what you need. &nbsp;
-                    <span className=" decoration-[#F7ABOA]/50 underline">Lets talk.</span>
+                    <span className=" decoration-[#F7AB0A]/50 underline">Lets talk.</span>
                 </h4>
-                <div className="space-y-10 ">
-                    <div className="flex items-center space-x-5 justify-center">
+                <div className="space-y-10 w-3/4">
+                    {/* <div className="flex items-center space-x-5 justify-center">
                         <PhoneIcon className=" text-[#F7AB0A] h-7 w-7 animate-pulse" />
                         <p className="text-2xl">+1234567890</p>
                     </div>
@@ -41,17 +41,20 @@ function Contact({}: Props) {
                     <div className="flex items-center space-x-5 justify-center">
                         <MapPinIcon className=" text-[#F7AB0A] h-7 w-7 animate-pulse" />
                         <p className="text-2xl">123 Developer Lane</p>
-                    </div>
+                    </div> */}
                     <form
                         onSubmit={handleSubmit(onSubmit)}
                         className='
-                        flex flex-col space-y-2 w-fit mx-auto
+                        flex flex-col space-y-2 
+                        w-full mx-auto justify-center
                     '>
                         <div className='
-                            flex space-x-2
+                            flex flex-col space-y-2
+                            md:flex-row md:space-x-2 md:space-y-0
+                            justify-center items-stretch
                         '>
-                            <input {...register('firstname')} className='contactInput' type="text" placeholder='First Name' />
-                            <input {...register('lastname')} className='contactInput' type="text" placeholder='Last Name' />
+                            <input {...register('firstname')} className='contactInput w-full' type="text" placeholder='First Name' />
+                            <input {...register('lastname')} className='contactInput w-full' type="text" placeholder='Last Name' />
                         </div>
                         <input {...register('email')} className='contactInput' type="email" placeholder='Email' />
                         <textarea {...register('message')} className='contactInput' placeholder='Message' />

@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard';
 type Props = {};
 
 function Projects({}: Props) {
-    const projects = [1, 2, 3, 4,];
+    const projects = [1, 2, 3, 4, 5];
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -19,10 +19,10 @@ function Projects({}: Props) {
             <div className='pageContent'>
                 <div className='
                     relative
-                    w-full
                     grid gap-5 
                     max-[500px]:grid-cols-1 grid-cols-2 lg:grid-cols-3 
-                    pb-10 lg:pb-20
+                    justify-center
+                    pb-10 lg:pb-2
                 '>
                     {projects.map((project, i) =>
                         <ProjectCard key={i} />
