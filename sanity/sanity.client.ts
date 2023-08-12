@@ -2,7 +2,7 @@
 import { createClient, type ClientConfig } from "@sanity/client";
 
 const config: ClientConfig = {
-    projectId: "ga8lllhf",
+    projectId: "5kd9e4oa",
     dataset: "production",
     apiVersion: "2023-08-12",
     useCdn: false,

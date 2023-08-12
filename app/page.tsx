@@ -2,15 +2,22 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
-import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
-import Link from 'next/link';
 
-export default function Home() {
-	return (
-		<main
-			className='
+import { getJobs, getProfile, getProjects } from '@/sanity/sanity.query';
+import { JobType, ProfileType, ProjectType } from '@/types';
+
+type Props = {};
+
+const Home = async ({}: Props) => {
+    const profile: ProfileType = await getProfile();
+    const jobs: JobType[] = await getJobs();
+    const projects: ProjectType[] = await getProjects();
+
+    return (
+        <main
+            className='
 			bg-[rgb(36,36,36)] 2text-white h-screen
 			snap-y  
 			overflow-y-scroll overflow-x-hidden
@@ -19,33 +26,33 @@ export default function Home() {
 			scrollbar-thumb-slate-300
     	'>
 
-			<Header />
+            <Header />
 
-			<section id='hero' className='individualPage'>
-				<Hero />
-			</section>
+            <section id='hero' className='individualPage'>
+                <Hero />
+            </section>
 
-			<section id='about' className='individualPage'>
-				<About />
-			</section>
+            <section id='about' className='individualPage'>
+                <About />
+            </section>
 
-			<section id='experiences' className='individualPage'>
-				<Experience />
-			</section>
+            <section id='experiences' className='individualPage'>
+                <Experience jobs={jobs} />
+            </section>
 
-			{/* <section id='skills' className='individualPage'>
+            {/* <section id='skills' className='individualPage'>
 				<Skills />
 			</section> */}
 
-			<section id='projects' className='individualPage'>
-				<Projects />
-			</section>
+            <section id='projects' className='individualPage'>
+                <Projects projects={projects} />
+            </section>
 
-			<section id='contact' className='individualPage'>
-				<Contact />
-			</section>
+            <section id='contact' className='individualPage'>
+                <Contact />
+            </section>
 
-			{/* <Link href='#hero'>
+            {/* <Link href='#hero'>
 				<footer className='sticky bottom-5 cursor-pointer'>
 					<div className='flex items-center justify-center sm:justify-end'>
 						<img
@@ -54,6 +61,8 @@ export default function Home() {
 					</div>
 				</footer>
 			</Link> */}
-		</main>
-	);
-}
+        </main>
+    );
+};
+
+export default Home;

@@ -22,7 +22,7 @@ export async function getProfile() {
     );
 }
 
-export async function getJob() {
+export async function getJobs() {
     return client.fetch(
         groq`*[_type == "job"]{
       _id,
@@ -42,6 +42,7 @@ export async function getProjects() {
         groq`*[_type == "project"]{
       _id, 
       name,
+      projectUrl,
       "slug": slug.current,
       tagline,
       "logo": logo.asset->url,

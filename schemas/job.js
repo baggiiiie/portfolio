@@ -1,8 +1,6 @@
-import { defineType } from 'sanity';
-
-export default defineType({
-    name: "experience",
-    title: "Experience",
+const job = {
+    name: "job",
+    title: "Job",
     type: "document",
     // icon: BiBriefcase,
     fields: [
@@ -51,4 +49,6 @@ export default defineType({
             type: "boolean",
         },
     ],
-});
+};
+
+export default job;

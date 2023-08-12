@@ -2,9 +2,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-type Props = {};
+type Props = {
+    jobTitle: string,
+    logo: string,
+    startDate: Date,
+    endDate: Date,
+    isCurrentlyWorkingHere: boolean,
+};
 
-function ExperienceCard({}: Props) {
+function ExperienceCard({ jobTitle, logo, startDate, endDate, isCurrentlyWorkingHere }: Props) {
     return (
         <article className='experienceCard'>
             <motion.img
@@ -17,11 +23,11 @@ function ExperienceCard({}: Props) {
                 className="w-32 h-32 rounded-full
                 xl:w-[100px] xl:h-[100px]
                 object-cover object-center"
-                src='sticker.png'
+                src={`${logo}`}
                 alt='Experience Picture'
             />
             <div className='px-3 md:px-10'>
-                <h4 className='font-bold sm:text-2xl md:text-4xl'>Position</h4>
+                <h4 className='font-bold sm:text-2xl md:text-4xl'>{jobTitle}</h4>
                 <p className='sm:text-xl md:text-2xl mt-1 '>Some info here</p>
                 <div className='hidden md:flex space-x-2 my-2'>
                     <img
@@ -35,8 +41,8 @@ function ExperienceCard({}: Props) {
                         src="sticker.png" alt="Skills Picture" />
                 </div>
                 <p className='uppercase py-5 text-gray-300 text-sm'>
-                    Started work... <br />
-                    Ended ...
+                    Started {startDate.toString()} <br />
+                    Ended {endDate.toString()}
                 </p>
                 <ul className='hidden md:inline-block list-disc space-y-1 ml-5 text-lg'>
                     <li>
