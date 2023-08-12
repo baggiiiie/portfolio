@@ -1,4 +1,6 @@
-export default {
+import { defineField, defineType } from 'sanity';
+
+export default defineType({
   name: 'pageInfo',
   title: 'PageInfo',
   type: 'document',
@@ -56,4 +58,4 @@ export default {
       of: [{ type: "reference", to: { type: "social" } }],
     },
   ],
-};
+});

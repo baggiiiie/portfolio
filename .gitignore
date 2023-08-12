@@ -38,4 +38,4 @@ next-env.d.ts
 /.vscode
 /app
 /dist
-sanity.config.js
+/sanity-studio
