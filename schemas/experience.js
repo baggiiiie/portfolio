@@ -1,58 +1,54 @@
 import { defineType } from 'sanity';
 
 export default defineType({
-  name: "experience",
-  title: "Experience",
-  type: "document",
-  fields: [
-    {
-      name: 'jobTitle',
-      title: 'jobTitle',
-      type: 'string',
-    },
-    {
-      name: 'companyImage',
-      title: 'Company Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'company',
-      title: 'Company',
-      type: 'text',
-    },
-    {
-      name: 'dateStarted',
-      title: 'Date Started',
-      type: 'date',
-    },
-    {
-      name: 'dateEnded',
-      title: 'Date Ended',
-      type: 'date',
-    },
-    {
-      name: 'isCurrentlyWorkingHere',
-      title: 'IsCurrentlyWorkingHere',
-      type: 'boolean',
-    },
-    // {
-    // 	name: "technologies",
-    // 	title: "Technologies",
-    // 	type: "array",
-    // 	of: [{
-    // 		type: "reference", to: {
-    // 			type: "skill"
-    // 		}
-    // 	}],
-    // },
-    {
-      name: "points",
-      title: "Points",
-      type: "array",
-      of: [{ type: "string" }],
-    },
-  ],
+    name: "experience",
+    title: "Experience",
+    type: "document",
+    // icon: BiBriefcase,
+    fields: [
+        {
+            name: "name",
+            title: "Company Name",
+            type: "string",
+            description: "What is the name of the company?",
+        },
+        {
+            name: "jobTitle",
+            title: "Job Title",
+            type: "string",
+            description: "Enter the job title. E.g: Software Developer",
+        },
+        {
+            name: "logo",
+            title: "Company Logo",
+            type: "image",
+        },
+        {
+            name: "url",
+            title: "Company Website",
+            type: "url",
+        },
+        {
+            name: "description",
+            title: "Job Description",
+            type: "text",
+            rows: 3,
+            description: "Write a brief description about this role",
+        },
+        {
+            name: "startDate",
+            title: "Start Date",
+            type: "date",
+        },
+        {
+            name: "endDate",
+            title: "End Date",
+            type: "date",
+        },
+        {
+            name: "isCurrentlyWorkingHere",
+            title: "IsCurrentlyWorkingHere",
+            type: "boolean",
+        },
+    ],
 });

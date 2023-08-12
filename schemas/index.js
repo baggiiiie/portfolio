@@ -4,7 +4,7 @@
 // import author from './author'
 
 import experience from './experience';
-import pageInfo from './pageInfo';
+import profile from './profile';
 import project from './project';
 import social from './social';
 
@@ -13,4 +13,4 @@ import social from './social';
 // 		pageInfo, project, experience, social,
 // 	],
 // };
-export const schemaTypes = [experience, pageInfo, project, social];
+export const schemaTypes = [experience, profile, project, social];
