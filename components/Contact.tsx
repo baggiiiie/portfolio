@@ -26,8 +26,9 @@ function Contact({}: Props) {
             <h3 className='pageTitle'>Contact</h3>
             <div className="m-auto flex flex-col space-y-10 pageContent justify-start">
                 <h4 className="text-4xl font-semibold text-center">
-                    I have got just what you need. &nbsp;
-                    <span className=" decoration-[#F7AB0A]/50 underline">Lets talk.</span>
+                    Drop me a&nbsp;
+                    <span className=" decoration-[#F7AB0A]/50 underline">message</span>
+                    &nbsp;here
                 </h4>
                 <div className="space-y-10 w-3/4">
                     {/* <div className="flex items-center space-x-5 justify-center">

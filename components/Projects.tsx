@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import { ProjectType } from '@/types';
+import ProjectCardDummy from './ProjectCardDummy';
 
 type Props = {
     projects: ProjectType[];
@@ -28,11 +29,13 @@ function Projects({ projects }: Props) {
                     {projects.map((project) =>
                         <ProjectCard
                             key={project._id}
-                            logo={project.logo}
-                            alt={project.tagline}
-                            url={project.projectUrl}
+                            project={project}
                         />
                     )}
+                    <ProjectCardDummy />
+                    <ProjectCardDummy />
+                    <ProjectCardDummy />
+                    <ProjectCardDummy />
                 </div>
             </div>
         </motion.div>

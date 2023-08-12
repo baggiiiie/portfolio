@@ -87,7 +87,7 @@ body {
 	.experienceCard {
 		@apply
 		flex flex-col space-y-7 flex-shrink-0
-		px-5 py-10 mb-5
+		p-5 mb-5
 		items-center snap-center 
 		max-[400px]:w-[50vw]
 		w-[40vw] lg:w-[20vw] max-w-[800px] md:min-w-[400px] 

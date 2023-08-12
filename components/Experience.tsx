@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
 import { JobType } from '@/types';
+import ExperienceCardDummy from './ExperienceCardDummy';
 
 type Props = {
     jobs: JobType[];
@@ -21,13 +22,12 @@ function Experience({ jobs }: Props) {
                     {jobs.map((job) =>
                         <ExperienceCard
                             key={job._id}
-                            jobTitle={job.jobTitle}
-                            logo={job.logo}
-                            startDate={job.startDate}
-                            endDate={job.endDate}
-                            isCurrentlyWorkingHere={job.isCurrentlyWorkingHere}
+                            job={job}
                         />
                     )}
+                    <ExperienceCardDummy />
+                    <ExperienceCardDummy />
+                    <ExperienceCardDummy />
                 </div>
             </div>
         </motion.div>
