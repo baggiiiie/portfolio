@@ -30,7 +30,14 @@ export default function Hero({ profile }: Props) {
             <BackgroundCircle />
             <Image
                 className='relative rounded-full h-20 w-20 mx-auto object-cover'
-                src='sticker.png' alt='profile pic' />
+                src='sticker.png' alt='profile pic'
+                sizes="100vw"
+                // Make the image display full width
+                style={{
+                    width: '100%',
+                    height: 'auto',
+                }}
+            />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
                     {profile?.headline}

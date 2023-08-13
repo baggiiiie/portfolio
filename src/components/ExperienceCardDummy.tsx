@@ -24,6 +24,12 @@ function ExperienceCardDummy({ job }: Props) {
                     justify-center'
                     src={`${job.logo}`}
                     alt={`${job.name}`}
+                    sizes="100vw"
+                    // Make the image display full width
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
                 />
             </motion.div>
             <div className='px-3 md:px-10'>
@@ -32,13 +38,24 @@ function ExperienceCardDummy({ job }: Props) {
                 <div className='hidden md:flex space-x-2 my-2'>
                     <Image
                         className='h-10 w-10 rounded-full'
-                        src="sticker.png" alt="Skills Picture" />
+                        src="sticker.png" alt="Skills Picture"
+                        sizes="100vw"
+                        // Make the image display full width
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                        }}
+                    />
                     <Image
                         className='h-10 w-10 rounded-full'
-                        src="sticker.png" alt="Skills Picture" />
-                    <Image
-                        className='h-10 w-10 rounded-full'
-                        src="sticker.png" alt="Skills Picture" />
+                        src="sticker.png" alt="Skills Picture"
+                        sizes="100vw"
+                        // Make the image display full width
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                        }}
+                    />
                 </div>
                 <p className='uppercase py-5 text-gray-300 text-sm'>
                     Started {job.startDate.toString()} <br />

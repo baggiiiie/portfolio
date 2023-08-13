@@ -13,7 +13,14 @@ function ProjectCard({ project }: Props) {
         <div className='group projectCardContainer'>
             <div className='projectCard'>
                 <div className='projectCardFront'>
-                    <Image src={`${project.logo}`} alt={`${project.slug}`} className='projectCardFrontImg' />
+                    <Image src={`${project.logo}`} alt={`${project.slug}`} className='projectCardFrontImg'
+                        sizes="100vw"
+                        // Make the image display full width
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                        }}
+                    />
                 </div>
                 <div className='projectCardBack'>
                     <div className='flex min-h-full flex-col items-center justify-center break-words'>
