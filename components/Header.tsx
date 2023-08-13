@@ -4,10 +4,14 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { ProfileType } from '@/types';
 
-type Props = {};
+type Props = {
+    profile: ProfileType;
+};
 
-function Header({}: Props) {
+function Header({ profile }: Props) {
+    console.log(Object.entries(profile.socialLinks));
     return (
         <header className='
                 sticky top-0 flex items-start justify-between 
@@ -30,24 +34,16 @@ function Header({}: Props) {
                 }}
                 className='flex flex-row items-center'
             >
-                <SocialIcon
-                    url='https://www.linkedin.com'
-                    fgColor='white'
-                    bgColor='transparent'
-                />
-                <SocialIcon
-                    url='https://www.github.com/baggiiiie'
-                    fgColor='white'
-                    bgColor='transparent'
-                />
-                <SocialIcon
-                    url='https://www.instagram.com/baggiiiie'
-                    fgColor='white'
-                    bgColor='transparent'
-                />
+                {Object.entries(profile.socialLinks).map((link, i) =>
+                    <SocialIcon
+                        key={i}
+                        url={`${link[1]}`}
+                        fgColor='white'
+                        bgColor='transparent'
+                    />
+                )}
             </motion.div>
 
-            {/* <Link href='#contact'> */}
             <motion.div
                 initial={{
                     x: 500,
@@ -63,16 +59,20 @@ function Header({}: Props) {
                     duration: 1.5
                 }}
                 className='cursor-pointer flex flex-row items-center'>
+                {/* <a href={'#contact'}> */}
                 <SocialIcon
                     network='email'
                     fgColor='white'
                     bgColor='transparent'
+                    url='#contact'
                 />
-                <a href='#contact'><p className='hidden md:inline-flex text-sm text-gray-400'>
-                    Get in touch!
-                </p></a>
+                <a href='#contact'>
+                    <p className='hidden md:inline-flex text-sm text-gray-400'>
+                        Get in touch!
+                    </p>
+                </a>
+                {/* </a> */}
             </motion.div>
-            {/* </Link> */}
         </header>
     );
 }

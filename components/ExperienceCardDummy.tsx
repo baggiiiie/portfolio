@@ -13,7 +13,7 @@ function ExperienceCard({}: Props) {
                 transition={{ duration: 1.5 }}
                 // animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                // viewport={{ once: true }}
+                viewport={{ once: true }}
 
                 className="max-w-[80%] max-h-[20%]
                 rounded-full

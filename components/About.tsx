@@ -1,10 +1,14 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ProfileType } from '@/types';
+import { PortableText } from '@portabletext/react';
 
-type Props = {};
+type Props = {
+    profile: ProfileType;
+};
 
-function About({}: Props) {
+function About({ profile }: Props) {
     return (
         <motion.div
             initial={{ opacity: 0, }}
@@ -37,11 +41,13 @@ function About({}: Props) {
                     alt='some image'
                 />
                 <div className=' space-y-10 px-0 md:px-10'>
-                    <h4 className='relative text-4xl font-semibold md:mt-10'>This is my background</h4>
+                    <h4 className='relative text-4xl font-semibold md:mt-10 break-all'>{profile.shortBio}</h4>
                     <p className='relative my-auto '>
-                        this is some background...
+                        this is a test message
                     </p>
-                </div></div>
+                    <PortableText value={profile.fullBio} />
+                </div>
+            </div>
         </motion.div>
     );
 }

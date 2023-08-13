@@ -6,11 +6,10 @@
 import job from './job';
 import profile from './profile';
 import project from './project';
-import social from './social';
 
 // export const schema = {
 // 	types: [
 // 		pageInfo, project, experience, social,
 // 	],
 // };
-export const schemaTypes = [job, profile, project, social];
+export const schemaTypes = [job, profile, project,];

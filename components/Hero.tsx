@@ -3,10 +3,13 @@ import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
+import { ProfileType } from '@/types';
 
-type Props = {};
+type Props = {
+    profile: ProfileType;
+};
 
-export default function Hero({}: Props) {
+export default function Hero({ profile }: Props) {
     const [text, count] = useTypewriter({
         words: [
             "So you've found my website",
@@ -28,7 +31,7 @@ export default function Hero({}: Props) {
                 src='sticker.png' alt='profile pic' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
-                    my personal space
+                    {profile?.headline}
                 </h2>
                 <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                     <span>{text}</span>
@@ -41,9 +44,9 @@ export default function Hero({}: Props) {
                     <Link href='#experiences'>
                         <button className='heroButton'>Experiences</button>
                     </Link>
-                    <Link href='#skills'>
+                    {/* <Link href='#skills'>
                         <button className='heroButton'>Skills</button>
-                    </Link>
+                    </Link> */}
                     <Link href='#projects'>
                         <button className='heroButton'>Projects</button>
                     </Link>
