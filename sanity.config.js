@@ -7,7 +7,7 @@ export default defineConfig({
     name: 'default',
     title: 'portfolio-sanity',
 
-    basePath: '/src/app/studio',
+    basePath: '/studio',
 
     projectId: '5kd9e4oa',
     dataset: 'production',
