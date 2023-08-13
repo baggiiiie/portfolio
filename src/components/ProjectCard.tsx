@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
 import { ProjectType } from '@/src/types';
 import { PortableText } from '@portabletext/react';
+import Image from 'next/image';
 
 type Props = {
     project: ProjectType;
@@ -12,7 +13,7 @@ function ProjectCard({ project }: Props) {
         <div className='group projectCardContainer'>
             <div className='projectCard'>
                 <div className='projectCardFront'>
-                    <img src={`${project.logo}`} alt={`${project.slug}`} className='projectCardFrontImg' />
+                    <Image src={`${project.logo}`} alt={`${project.slug}`} className='projectCardFrontImg' />
                 </div>
                 <div className='projectCardBack'>
                     <div className='flex min-h-full flex-col items-center justify-center break-words'>

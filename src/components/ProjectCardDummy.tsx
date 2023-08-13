@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -8,7 +9,7 @@ function ProjectCardDummy({}: Props) {
         <div className='group projectCardContainer'>
             <div className='projectCard'>
                 <div className='projectCardFront'>
-                    <img src='sticker.png' alt='' className='projectCardFrontImg' />
+                    <Image src='sticker.png' alt='' className='projectCardFrontImg' />
                 </div>
                 <div className='projectCardBack'>
                     <div className='flex min-h-full flex-col items-center justify-center break-words'>
