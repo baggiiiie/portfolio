@@ -11,7 +11,6 @@ type Props = {
 };
 
 function Header({ profile }: Props) {
-    console.log(Object.entries(profile.socialLinks));
     return (
         <header className='
                 sticky top-0 flex items-start justify-between 

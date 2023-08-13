@@ -16,12 +16,15 @@ function ProjectCard({ project }: Props) {
                 </div>
                 <div className='projectCardBack'>
                     <div className='flex min-h-full flex-col items-center justify-center break-words'>
-                        <h1 className='text-xl md:text-2xl font-bold p-2 md:p-5 lg:px-8'>{project.name}</h1>
+                        <h1 className='text-xl md:text-2xl font-bold p-2 md:p-5 lg:px-8 mb-2'>{project.name}</h1>
                         {/* <p className='text-base pb-2 max-[500px]:hidden'>something</p> */}
                         {/* <PortableText value={project.description} /> */}
                         <a href={`${project.projectUrl}`}>
-                            <span className='heroButton min-[500px]:inline relative hidden border-white/40 text-white/40'>Have a look</span>
-                            <ArrowRightCircleIcon className='w-8 text-white/40 max-[500px]:inline hidden hover:text-[#f7ab0a]/40
+                            <span className='heroButton relative
+                                min-[651px]:inline hidden
+                                border-white/40 text-white/40
+                            '>Have a look</span>
+                            <ArrowRightCircleIcon className='w-8 text-white/40 max-[650px]:inline hidden hover:text-[#f7ab0a]/40
                             transition-all ease-in-out duration-500' />
                         </a>
                     </div>
