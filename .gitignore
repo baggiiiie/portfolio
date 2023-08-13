@@ -40,5 +40,6 @@ next-env.d.ts
 /dist
 /sanity-studio
 
-/.firebase
+/.vercel
 /.github
+/.eslintrc.json
