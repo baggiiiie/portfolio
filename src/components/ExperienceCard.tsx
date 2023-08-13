@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { JobType } from '@/types';
+import { JobType } from '@/src/types';
 
 type Props = {
     job: JobType;

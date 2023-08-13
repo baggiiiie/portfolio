@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { ProjectType } from '@/types';
+import { ProjectType } from '@/src/types';
 import ProjectCardDummy from './ProjectCardDummy';
 
 type Props = {

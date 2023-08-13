@@ -3,7 +3,7 @@ import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
-import { ProfileType } from '@/types';
+import { ProfileType } from '@/src/types';
 
 type Props = {
     profile: ProfileType;

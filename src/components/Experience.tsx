@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
-import { JobType } from '@/types';
+import { JobType } from '@/src/types';
 import ExperienceCardDummy from './ExperienceCardDummy';
 
 type Props = {

@@ -4,7 +4,7 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ProfileType } from '@/types';
+import { ProfileType } from '@/src/types';
 
 type Props = {
     profile: ProfileType;

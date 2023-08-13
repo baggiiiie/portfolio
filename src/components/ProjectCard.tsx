@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
-import { ProjectType } from '@/types';
+import { ProjectType } from '@/src/types';
 import { PortableText } from '@portabletext/react';
 
 type Props = {
