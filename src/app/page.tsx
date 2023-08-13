@@ -10,15 +10,15 @@ import { JobType, ProfileType, ProjectType } from '@/src/types';
 import { GetStaticProps } from 'next';
 
 type Props = {
-    // profiles: ProfileType[];
-    // projects: ProjectType[];
-    // jobs: JobType[];
+    profiles: ProfileType[];
+    projects: ProjectType[];
+    jobs: JobType[];
 };
 
-const Home = async ({}: Props) => {
-    const profiles: ProfileType[] = await getProfile();
-    const jobs: JobType[] = await getJobs();
-    const projects: ProjectType[] = await getProjects();
+const Home = async ({ profiles, projects, jobs }: Props) => {
+    // const profiles: ProfileType[] = await getProfile();
+    // const jobs: JobType[] = await getJobs();
+    // const projects: ProjectType[] = await getProjects();
     const profile: ProfileType = profiles[0];
 
     return (
@@ -74,18 +74,18 @@ const Home = async ({}: Props) => {
 
 export default Home;
 
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-//     const profiles = await getProfile();
-//     const jobs = await getJobs();
-//     const projects = await getProjects();
+export async function getStaticProps() {
+    const profiles = await getProfile();
+    const jobs = await getJobs();
+    const projects = await getProjects();
 
-//     return {
-//         props: {
-//             profiles,
-//             jobs,
-//             projects,
-//         },
+    return {
+        props: {
+            profiles,
+            jobs,
+            projects,
+        },
 
-//         revalidate: 100
-//     };
-// };
+        revalidate: 100
+    };
+};
