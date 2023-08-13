@@ -14,7 +14,7 @@ function About({ profile }: Props) {
             initial={{ opacity: 0, }}
             whileInView={{ opacity: 1, }}
             transition={{ duration: 1.5 }}
-            className='pageDiv'>
+            className='pageDiv h-[60vh]'>
             <h3 className='pageTitle md:mt-0'>About</h3>
             <div className='
                 pageContent

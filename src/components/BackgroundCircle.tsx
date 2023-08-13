@@ -20,11 +20,11 @@ function BackgroundCircle({}: Props) {
                 duration: 3
             }}
             className='relative flex justify-center items-center'>
-            <div className='absolute rounded-full border-4 opacity-20 border-[#6d3f3f] h-[200px] w-[200px] mt-52 animate-ping' />
-            <div className='absolute rounded-full border-4 opacity-20 border-[#b98b8b] h-[300px] w-[300px] mt-52 animate-ping' />
-            <div className='absolute rounded-full border-4 opacity-20 border-[#f7ab0a] h-[400px] w-[400px] mt-52 animate-ping' />
-            <div className='absolute rounded-full border-4 opacity-20 border-[#f7ab0a] h-[500px] w-[500px] mt-52 animate-ping' />
-            <div className='absolute rounded-full border-4 opacity-20 border-[#7286ac] h-[600px] w-[600px] mt-52 animate-ping' />
+            <div className='heroCircle border-[#6d3f3f] h-[200px] w-[200px]' />
+            <div className='heroCircle border-[#b98b8b] h-[300px] w-[300px]' />
+            <div className='heroCircle border-[#f7ab0a] h-[400px] w-[400px]' />
+            <div className='heroCircle border-[#f7ab0a] h-[500px] w-[500px]' />
+            <div className='heroCircle border-[#7286ac] h-[600px] w-[600px]' />
         </motion.div>
     );
 }

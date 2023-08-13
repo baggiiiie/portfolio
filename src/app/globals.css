@@ -44,7 +44,8 @@ body {
 		max-w-full
 		justify-center  space-y-8  
 		mx-auto items-center
-		z-0
+		z-0 
+        mb-[20%] md:mb-0
 	}
 	.pageTitle {
 		@apply 
@@ -64,9 +65,13 @@ body {
 		items-center
 		justify-center
 	}
+    .heroCircle {
+        @apply
+        absolute rounded-full border-4 opacity-20 mt-52 animate-ping
+    }
 	.heroButton {
 		@apply
-		px-6 py-2 mx-5
+		px-6 py-2 mx-5 my-3
 		border border-gray-300/40 rounded-full
 		uppercase text-sm text-gray-100/40
 		transition-all ease-in-out duration-500

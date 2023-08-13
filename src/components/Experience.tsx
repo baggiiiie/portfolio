@@ -25,9 +25,9 @@ function Experience({ jobs }: Props) {
                             job={job}
                         />
                     )}
-                    <ExperienceCardDummy />
-                    <ExperienceCardDummy />
-                    <ExperienceCardDummy />
+                    <ExperienceCardDummy job={jobs[0]} />
+                    <ExperienceCardDummy job={jobs[0]} />
+                    <ExperienceCardDummy job={jobs[0]} />
                 </div>
             </div>
         </motion.div>

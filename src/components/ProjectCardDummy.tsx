@@ -15,8 +15,11 @@ function ProjectCardDummy({}: Props) {
                         <h1 className='text-xl md:text-2xl font-bold p-2 md:p-5 lg:px-8'>something something</h1>
                         <p className='text-base pb-2 max-[500px]:hidden'>something</p>
                         <a href='https://www.google.com'>
-                            <span className='heroButton min-[500px]:inline relative hidden border-white/40 text-white/40'>Have a look</span>
-                            <ArrowRightCircleIcon className='w-8 text-white/40 max-[500px]:inline hidden hover:text-[#f7ab0a]/40
+                            <span className='heroButton relative
+                                min-[651px]:inline hidden
+                                border-white/40 text-white/40
+                            '>Have a look</span>
+                            <ArrowRightCircleIcon className='w-8 text-white/40 max-[650px]:inline hidden hover:text-[#f7ab0a]/40
                             transition-all ease-in-out duration-500' />
                         </a>
                     </div>

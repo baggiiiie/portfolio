@@ -23,7 +23,8 @@ export default function Hero({ profile }: Props) {
     return (
         <div className='
             pageDiv
-            text-center mt-[-30px]
+            text-center -mt-[25vh]
+            h-[135vh]
         '>
             <BackgroundCircle />
             <img
