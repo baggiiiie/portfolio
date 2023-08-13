@@ -30,13 +30,13 @@ function ExperienceCardDummy({ job }: Props) {
                 <h4 className='font-bold sm:text-2xl md:text-3xl'>{job.jobTitle}</h4>
                 <p className='sm:text-xl md:text-2xl mt-2 '>{job.name}</p>
                 <div className='hidden md:flex space-x-2 my-2'>
-                    <img
+                    <Image
                         className='h-10 w-10 rounded-full'
                         src="sticker.png" alt="Skills Picture" />
-                    <img
+                    <Image
                         className='h-10 w-10 rounded-full'
                         src="sticker.png" alt="Skills Picture" />
-                    <img
+                    <Image
                         className='h-10 w-10 rounded-full'
                         src="sticker.png" alt="Skills Picture" />
                 </div>
