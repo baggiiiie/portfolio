@@ -39,3 +39,6 @@ next-env.d.ts
 /app
 /dist
 /sanity-studio
+
+/.firebase
+/.github
