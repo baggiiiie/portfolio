@@ -44,7 +44,6 @@ body {
 		max-w-full
 		justify-center  space-y-8  
 		mx-auto items-center
-		z-0 
         mb-[20%] md:mb-0
 	}
 	.pageTitle {
@@ -60,7 +59,7 @@ body {
 	}
 	.pageContent {
 		@apply
-		relative m-auto 
+		relative m-auto z-20
 		max-w-[75%]
 		items-center
 		justify-center
@@ -91,7 +90,7 @@ body {
 	}
     .experienceCardContainer {
         @apply
-		mb-10
+		mb-10 mt-5
 		items-center snap-center 
 		/* max-[400px]:w-[50vw] */
 		[perspective:800px]
