@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
 import { JobType } from '@/src/types';
-import ExperienceCardDummy from './ExperienceCardDummy';
 
 type Props = {
     jobs: JobType[];
@@ -25,9 +24,9 @@ function Experience({ jobs }: Props) {
                             job={job}
                         />
                     )}
-                    <ExperienceCardDummy job={jobs[0]} />
-                    <ExperienceCardDummy job={jobs[0]} />
-                    <ExperienceCardDummy job={jobs[0]} />
+                    <ExperienceCard job={jobs[0]} />
+                    <ExperienceCard job={jobs[0]} />
+                    <ExperienceCard job={jobs[0]} />
                 </div>
             </div>
         </motion.div>
