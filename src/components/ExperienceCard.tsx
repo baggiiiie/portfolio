@@ -25,12 +25,6 @@ function ExperienceCard({ job }: Props) {
                     justify-center'
                     src={`${job.logo}`}
                     alt={`${job.name}`}
-                    sizes="100vw"
-                    // Make the image display full width
-                    style={{
-                        width: '100%',
-                        height: 'auto',
-                    }}
                 />
             </motion.div>
             <div className='px-3 md:px-10'>
