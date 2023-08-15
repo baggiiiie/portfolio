@@ -16,8 +16,9 @@ function ExperienceCard({ job }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
             // viewport={{ once: true }}
             >
-                <Image
-                    className='w-[80%]
+                <img
+                    className='
+                    max-w-[80%]
                     mt-2 mx-auto
                     rounded-full
                     object-cover object-center

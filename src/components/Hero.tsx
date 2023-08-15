@@ -39,7 +39,12 @@ export default function Hero({ profile }: Props) {
                 }}
             />
             <div className='z-20'>
-                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
+                <h2 className='
+                    text-sm uppercase text-gray-500 
+                    pb-2 tracking-[15px] 
+                    w-[80%] mx-auto
+                    text-center justify-center items-center
+                '>
                     {profile?.headline}
                 </h2>
                 <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
