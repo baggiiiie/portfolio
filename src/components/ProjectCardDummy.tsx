@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
 
 type Props = {};
 
@@ -9,13 +8,7 @@ function ProjectCardDummy({}: Props) {
         <div className='group projectCardContainer'>
             <div className='projectCard'>
                 <div className='projectCardFront'>
-                    <Image src='sticker.png' alt='' className='projectCardFrontImg'
-                        sizes="100vw"
-                        // Make the image display full width
-                        style={{
-                            width: '100%',
-                            height: 'auto',
-                        }}
+                    <img src='sticker.png' alt='' className='projectCardFrontImg'
                     />
                 </div>
                 <div className='projectCardBack'>

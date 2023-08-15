@@ -4,7 +4,6 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
 import { ProfileType } from '@/src/types';
-import Image from 'next/image';
 
 type Props = {
     profile: ProfileType;
@@ -28,15 +27,9 @@ export default function Hero({ profile }: Props) {
             h-[135vh]
         '>
             <BackgroundCircle />
-            <Image
+            <img
                 className='relative rounded-full h-20 w-20 mx-auto object-cover'
                 src='sticker.png' alt='profile pic'
-                sizes="100vw"
-                // Make the image display full width
-                style={{
-                    width: '100%',
-                    height: 'auto',
-                }}
             />
             <div className='z-20'>
                 <h2 className='

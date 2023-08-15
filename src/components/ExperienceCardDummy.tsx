@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { JobType } from '@/src/types';
-import Image from 'next/image';
 
 type Props = {
     job: JobType;
@@ -16,7 +15,7 @@ function ExperienceCardDummy({ job }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
             // viewport={{ once: true }}
             >
-                <Image
+                <img
                     className='w-[80%]
                     mt-2 mx-auto
                     rounded-full
@@ -24,37 +23,19 @@ function ExperienceCardDummy({ job }: Props) {
                     justify-center'
                     src={`${job.logo}`}
                     alt={`${job.name}`}
-                    sizes="100vw"
-                    // Make the image display full width
-                    style={{
-                        width: '100%',
-                        height: 'auto',
-                    }}
                 />
             </motion.div>
             <div className='px-3 md:px-10'>
                 <h4 className='font-bold sm:text-2xl md:text-3xl'>{job.jobTitle}</h4>
                 <p className='sm:text-xl md:text-2xl mt-2 '>{job.name}</p>
                 <div className='hidden md:flex space-x-2 my-2'>
-                    <Image
+                    <img
                         className='h-10 w-10 rounded-full'
                         src="sticker.png" alt="Skills Picture"
-                        sizes="100vw"
-                        // Make the image display full width
-                        style={{
-                            width: '100%',
-                            height: 'auto',
-                        }}
                     />
-                    <Image
+                    <img
                         className='h-10 w-10 rounded-full'
                         src="sticker.png" alt="Skills Picture"
-                        sizes="100vw"
-                        // Make the image display full width
-                        style={{
-                            width: '100%',
-                            height: 'auto',
-                        }}
                     />
                 </div>
                 <p className='uppercase py-5 text-gray-300 text-sm'>
