@@ -46,6 +46,7 @@ const Home = async ({}: Props) => {
 
             <section id='experiences' className='individualPage'>
                 <Experience jobs={jobs} />
+                {/* <Experience /> */}
             </section>
 
             {/* <section id='skills' className='individualPage'>

@@ -16,7 +16,8 @@ function ExperienceCard({ job }: Props) {
             // viewport={{ once: true }}
             >
                 <img
-                    className='w-[80%]
+                    className='
+                    max-w-[80%]
                     mt-2 mx-auto
                     rounded-full
                     object-cover object-center
