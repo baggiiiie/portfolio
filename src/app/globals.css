@@ -44,7 +44,6 @@ body {
 		max-w-full
 		justify-center  space-y-8  
 		mx-auto items-center
-		z-0 
         mb-[20%] md:mb-0
 	}
 	.pageTitle {
@@ -60,7 +59,7 @@ body {
 	}
 	.pageContent {
 		@apply
-		relative m-auto 
+		relative m-auto z-20
 		max-w-[75%]
 		items-center
 		justify-center
@@ -83,22 +82,57 @@ body {
 		/* absolute top-1/2 -translate-y-1/2 */
 		relative
 		w-full flex 
-		space-x-10
+		space-x-5 
 		overflow-x-scroll 
 		px-[40%] snap-x 
 		scrollbar-thin scrollbar-track-transparent
 		scrollbar-thumb-slate-300
 	}
+    .experienceCardContainer {
+        @apply
+		mb-10 mt-5
+		items-center snap-center 
+		/* max-[400px]:w-[50vw] */
+		[perspective:800px]
+		/* flex flex-col space-y-7 flex-shrink-0 */
+    }
 	.experienceCard {
 		@apply
-		flex flex-col space-y-7 flex-shrink-0
-		p-5 mb-5
-		items-center snap-center 
-		max-[400px]:w-[50vw]
-		w-[40vw] lg:w-[20vw] max-w-[800px] md:min-w-[400px] 
-		opacity-40 hover:opacity-100 transition-opacity duration-200
-		rounded-lg bg-[#5e5e5e] 
+		relative m-auto
+		h-[50vh] min-h-[400px]
+		w-[45vw] md:w-[35vw] max-w-[300px]
+        /* my-10 */
+		transition-all duration-500
+		bg-[#5e5e5e] 
+        rounded-xl
+  		[transform-style:preserve-3d] 
+		group-hover:[transform:rotateY(180deg)]
 	}
+    .experienceCardFront {
+        @apply
+        absolute
+        p-5
+        /* w-full h-full */
+        /* group-hover:w-0
+        group-hover:h-0 */
+        /* group-hover:hidden  */
+		[backface-visibility:hidden]
+        /* sm:px-5 md:px-8 lg:px-10 xl:px-12 */
+        sm:px-[10%]
+    }
+    .experienceCardBack {
+        @apply
+        absolute
+        /* hidden */
+        /* w-0 h-0 */
+        /* group-hover:w-full
+        group-hover:h-full */
+        /* group-hover:inline-block  */
+        [transform:rotateY(180deg)]
+    	[backface-visibility:hidden]
+        sm:px-[10%]
+        p-5
+    }
 	.projectCardContainer {
 		@apply
 		h-52 w-52
