@@ -7,43 +7,47 @@ type Props = {
 
 function ExperienceCard({ job }: Props) {
     return (
-        <article className='experienceCard'>
-            <motion.img
-                initial={{ y: -50, opacity: 0, }}
-                transition={{ duration: 1.5 }}
-                // animate={{ opacity: 1, y: 0 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                // viewport={{ once: true }}
-                className='
-                    max-w-[80%]
-                    mt-2 mx-auto
-                    rounded-full
-                    object-cover object-center
-                    justify-center'
-                src={`${job.logo}`}
-                alt={`${job.name}`}
-            />
-            <div className='px-3 md:px-10'>
-                <h4 className='font-bold sm:text-2xl md:text-3xl'>{job.jobTitle}</h4>
-                <p className='sm:text-xl md:text-2xl mt-2 '>{job.name}</p>
-                <div className='hidden md:flex space-x-2 my-2'>
-                    <img
-                        className='h-10 w-10 rounded-full'
-                        src="sticker.png" alt="Skills Picture"
+        <article className='group experienceCardContainer
+        
+        '>
+            <div className='experienceCard'>
+                <div className='experienceCardFront'>
+                    <motion.img
+                        initial={{ y: -50, opacity: 0, }}
+                        transition={{ duration: 1.5 }}
+                        // animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        // viewport={{ once: true }}
+                        className='
+                        mx-auto
+                        object-cover object-center
+                        justify-center'
+                        src={`${job.logo}`}
+                        alt={`${job.name}`}
                     />
+                    <h4 className='font-bold text-gray-300 text-lg sm:text-xl md:text-2xl'>{job.jobTitle}</h4>
+                    <p className='font-light text-gray-300 text-base sm:text-lg md:text-xl mt-2 '>{job.name}</p>
+                    <p className='uppercase py-5 text-gray-400 text-sm md:text-base lg:text-lg'>
+                        Started {job.startDate.toString()} <br />
+                        Ended {job.endDate.toString()}
+                    </p>
                 </div>
-                <p className='uppercase py-5 text-gray-300 text-sm'>
-                    Started {job.startDate.toString()} <br />
-                    Ended {job.endDate.toString()}
-                </p>
-                <ul className='hidden md:inline-block list-disc space-y-1 ml-5 text-lg'>
-                    <li>
-                        {job.description}
-                    </li>
-                    <li>
-                        something something here
-                    </li>
-                </ul>
+                <div className='experienceCardBack'>
+                    <div className='space-x-2 my-2'>
+                        <img
+                            className='h-10 w-10 rounded-full'
+                            src="sticker.png" alt="Skills Picture"
+                        />
+                    </div>
+                    <ul className='list-disc space-y-1 ml-5 text-sm md:text-base'>
+                        <li>
+                            {job.description}
+                        </li>
+                        <li>
+                            something something here
+                        </li>
+                    </ul>
+                </div>
             </div>
         </article>
     );
