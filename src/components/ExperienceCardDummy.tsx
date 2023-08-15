@@ -8,23 +8,21 @@ type Props = {
 function ExperienceCardDummy({ job }: Props) {
     return (
         <article className='experienceCard'>
-            <motion.div
-                initial={{ y: -100, opacity: 0, }}
+            <motion.img
+                initial={{ y: -50, opacity: 0, }}
                 transition={{ duration: 1.5 }}
                 // animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-            // viewport={{ once: true }}
-            >
-                <img
-                    className='w-[80%]
+                // viewport={{ once: true }}
+                className='
+                    max-w-[80%]
                     mt-2 mx-auto
                     rounded-full
                     object-cover object-center
                     justify-center'
-                    src={`${job.logo}`}
-                    alt={`${job.name}`}
-                />
-            </motion.div>
+                src={`${job.logo}`}
+                alt={`${job.name}`}
+            />
             <div className='px-3 md:px-10'>
                 <h4 className='font-bold sm:text-2xl md:text-3xl'>{job.jobTitle}</h4>
                 <p className='sm:text-xl md:text-2xl mt-2 '>{job.name}</p>
