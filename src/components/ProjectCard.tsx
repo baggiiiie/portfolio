@@ -64,18 +64,20 @@ function ProjectCard({ project }: Props) {
 				/>
 			</motion.div>
 			<motion.div className="projectCardTextContainer">
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-					tenetur sunt at repellat dolores earum quidem illum, laborum eligendi
-					aliquid neque amet repudiandae consequatur similique ducimus nesciunt
-					velit ratione laboriosam?
-				</p>
-				<a href={`${project.projectUrl}`}>
+				<h3 className="projectName">{project.name}</h3>
+				<p className="projectDescription">{project.tagline}</p>
+				<div
+					className="relative 
+                    pt-4 mx-auto transition-all ease-in-out duration-300
+                    w-[50%] text-center text-white/40  hover:text-white"
+				>
+					<span className="inline pr-1">Have a look</span>
 					<ArrowRightCircleIcon
-						className="w-8 text-white/40  hover:text-white/80
-		                    transition-all ease-in-out duration-300 mx-auto"
+						className="inline w-5
+		                    "
+						href={project.projectUrl}
 					/>
-				</a>
+				</div>
 			</motion.div>
 		</motion.div>
 	);

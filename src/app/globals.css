@@ -92,7 +92,7 @@ body {
 		@apply relative m-auto
 		h-[50vh] min-h-[400px]
 		w-[45vw] md:w-[35vw] max-w-[300px]
-        mb-10
+        my-5
 		transition-all duration-500
 		bg-[#5e5e5e] 
         rounded-xl
@@ -102,21 +102,11 @@ body {
 	.experienceCardFront {
 		@apply absolute
         p-5
-        /* w-full h-full */
-        /* group-hover:w-0
-        group-hover:h-0 */
-        /* group-hover:hidden  */
 		[backface-visibility:hidden]
-        /* sm:px-5 md:px-8 lg:px-10 xl:px-12 */
         sm:px-[10%];
 	}
 	.experienceCardBack {
 		@apply absolute
-        /* hidden */
-        /* w-0 h-0 */
-        /* group-hover:w-full
-        group-hover:h-full */
-        /* group-hover:inline-block  */
         [transform:rotateY(180deg)]
     	[backface-visibility:hidden]
         sm:px-[10%]
@@ -153,24 +143,30 @@ body {
         h-[60vh] w-[80%]
         mt-[20vh] max-w-[400px]
         shadow-lg
-        flex flex-col;
+        flex flex-col 
+        /* landscape:flex-row; */;
 	}
 	.projectCardImgContainer {
 		@apply relative
-        mx-auto
-        h-[50%];
+        mx-auto bg-black rounded-t-lg
+        h-[50%] w-full
+        /* min-[640px]:landscape:h-full landscape:w-[40%]; */;
 	}
 	.projectCardImg {
 		@apply relative 
 		h-full w-full m-auto
-		rounded-t-lg object-cover;
+		rounded-t-lg object-contain;
 	}
 	.projectCardTextContainer {
 		@apply relative
         p-5
-		 text-slate-200 
+        text-white
 		md:text-center
         items-center justify-center;
+	}
+	.projectName {
+		@apply font-bold text-white
+        my-2 landscape:m-0;
 	}
 	.contactInput {
 		@apply outline-none bg-slate-400/10 

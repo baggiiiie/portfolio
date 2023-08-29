@@ -29,9 +29,7 @@ function Projects({ projects }: Props) {
 							onClick={() => content === null && setContent(project)}
 							key={project._id}
 							className="projectCoverContainer"
-							// layoutId={`project-img-container-${project._id}`}
 							layoutId={`project-card-img-container-${project._id}`}
-							// layout
 						>
 							<img
 								src={`${project.logo}`}
