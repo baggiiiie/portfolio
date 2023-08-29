@@ -1,10 +1,8 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircle from "./BackgroundCircle";
-import Link from "next/link";
 import { ProfileType } from "@/src/types";
-import { animate } from "framer-motion";
 
 type Props = {
 	profile: ProfileType;
@@ -31,7 +29,7 @@ export default function Hero({ profile }: Props) {
             pageDiv
             text-center -mt-[25vh]
             h-[135vh]
-        "
+            "
 		>
 			<BackgroundCircle />
 			<img
@@ -55,35 +53,24 @@ export default function Hero({ profile }: Props) {
 					<Cursor />
 				</h1>
 				<div className="pt-5">
-					{/* <Link href="#about"> */}
 					<button className="heroButton" onClick={() => handleClick("about")}>
 						About
 					</button>
-					{/* </Link> */}
-					{/* <Link href="#experiences"> */}
 					<button
 						className="heroButton"
 						onClick={() => handleClick("experiences")}
 					>
 						Experiences
 					</button>
-					{/* </Link> */}
-					{/* <Link href='#skills'>
-                        <button className='heroButton'>Skills</button>
-                    </Link> */}
-					{/* <Link href="#projects"> */}
 					<button
 						className="heroButton"
 						onClick={() => handleClick("projects")}
 					>
 						Projects
 					</button>
-					{/* </Link> */}
-					{/* <Link href='#contact'> */}
 					<button className="heroButton" onClick={() => handleClick("contact")}>
 						Contact
 					</button>
-					{/* </Link> */}
 				</div>
 			</div>
 		</div>

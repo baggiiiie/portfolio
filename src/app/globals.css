@@ -92,7 +92,7 @@ body {
 		@apply relative m-auto
 		h-[50vh] min-h-[400px]
 		w-[45vw] md:w-[35vw] max-w-[300px]
-        /* my-10 */
+        mb-10
 		transition-all duration-500
 		bg-[#5e5e5e] 
         rounded-xl

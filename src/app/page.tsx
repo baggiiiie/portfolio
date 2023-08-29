@@ -72,19 +72,3 @@ const Home = async ({}: Props) => {
 };
 
 export default Home;
-
-// export async function getStaticProps() {
-//     const profiles = await getProfile();
-//     const jobs = await getJobs();
-//     const projects = await getProjects();
-
-//     return {
-//         props: {
-//             profiles,
-//             jobs,
-//             projects,
-//         },
-
-//         revalidate: 100
-//     };
-// };
