@@ -1,30 +1,28 @@
-import Header from '@/src/components/Header';
-import Hero from '@/src/components/Hero';
-import About from '@/src/components/About';
-import Experience from '@/src/components/Experience';
-import Projects from '@/src/components/Projects';
-import Contact from '@/src/components/Contact';
-
-import { getJobs, getProfile, getProjects } from '@/src/sanity/sanity.query';
-import { JobType, ProfileType, ProjectType } from '@/src/types';
-import { GetStaticProps } from 'next';
+import Header from "@/src/components/Header";
+import Hero from "@/src/components/Hero";
+import About from "@/src/components/About";
+import Experience from "@/src/components/Experience";
+import Projects from "@/src/components/Projects";
+import Contact from "@/src/components/Contact";
+import { getJobs, getProfile, getProjects } from "@/src/sanity/sanity.query";
+import { JobType, ProfileType, ProjectType } from "@/src/types";
 
 type Props = {
-    // profiles: ProfileType[];
-    // projects: ProjectType[];
-    // jobs: JobType[];
+	// profiles: ProfileType[];
+	// projects: ProjectType[];
+	// jobs: JobType[];
 };
 
 // const Home = async ({ profiles, projects, jobs }: Props) => {
 const Home = async ({}: Props) => {
-    const profiles: ProfileType[] = await getProfile();
-    const jobs: JobType[] = await getJobs();
-    const projects: ProjectType[] = await getProjects();
-    const profile: ProfileType = profiles[0];
+	const profiles: ProfileType[] = await getProfile();
+	const jobs: JobType[] = await getJobs();
+	const projects: ProjectType[] = await getProjects();
+	const profile: ProfileType = profiles[0];
 
-    return (
-        <main
-            className='
+	return (
+		<main
+			className="
 			bg-[rgb(36,36,36)] text-white h-screen
 			snap-y  
 			overflow-y-scroll overflow-x-hidden
@@ -32,36 +30,35 @@ const Home = async ({}: Props) => {
 			scrollbar scrollbar-track-gray-400/20
 			scrollbar-thumb-slate-300
             scroll-smooth
-    	'>
+    	"
+		>
+			<Header profile={profile} />
 
-            <Header profile={profile} />
+			<section id="hero" className="individualPage">
+				<Hero profile={profile} />
+			</section>
 
-            <section id='hero' className='individualPage'>
-                <Hero profile={profile} />
-            </section>
+			<section id="about" className="individualPage">
+				<About profile={profile} />
+			</section>
 
-            <section id='about' className='individualPage'>
-                <About profile={profile} />
-            </section>
+			<section id="experiences" className="individualPage">
+				<Experience jobs={jobs} />
+				{/* <Experience /> */}
+			</section>
 
-            <section id='experiences' className='individualPage'>
-                <Experience jobs={jobs} />
-                {/* <Experience /> */}
-            </section>
-
-            {/* <section id='skills' className='individualPage'>
+			{/* <section id='skills' className='individualPage'>
 				<Skills />
 			</section> */}
 
-            <section id='projects' className='individualPage'>
-                <Projects projects={projects} />
-            </section>
+			<section id="projects" className="individualPage">
+				<Projects projects={projects} />
+			</section>
 
-            <section id='contact' className='individualPage'>
-                <Contact />
-            </section>
-
-            {/* <Link href='#hero'>
+			<section id="contact" className="individualPage">
+				<Contact />
+			</section>
+			{/* <Link href='#hero'>
 				<footer className='sticky bottom-5 cursor-pointer'>
 					<div className='flex items-center justify-center sm:justify-end'>
 						<img
@@ -70,8 +67,8 @@ const Home = async ({}: Props) => {
 					</div>
 				</footer>
 			</Link> */}
-        </main>
-    );
+		</main>
+	);
 };
 
 export default Home;
