@@ -65,7 +65,10 @@ function ProjectCard({ project }: Props) {
 			</motion.div>
 			<motion.div className="projectCardTextContainer">
 				<h3 className="projectName">{project.name}</h3>
-				<p className="projectDescription">{project.tagline}</p>
+				<p className="projectDescription md:hidden">{project.tagline}</p>
+				<p className="projectDescription hidden md:block">
+					{project.description}
+				</p>
 				<div
 					className="relative 
                     pt-4 mx-auto transition-all ease-in-out duration-300
@@ -73,8 +76,7 @@ function ProjectCard({ project }: Props) {
 				>
 					<span className="inline pr-1">Have a look</span>
 					<ArrowRightCircleIcon
-						className="inline w-5
-		                    "
+						className="inline w-5"
 						href={project.projectUrl}
 					/>
 				</div>

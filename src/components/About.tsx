@@ -23,12 +23,13 @@ function About({ profile }: Props) {
                 flex flex-col
                 md:flex-row
                 text-center md:text-left
-            "
+                "
 			>
 				<motion.img
 					className="m-auto mb-10 
                     flex-shrink-0 w-56 h-56 rounded-full
-                    object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[400px]"
+                    object-cover md:rounded-lg md:w-64 md:h-95 
+                    xl:w-[400px] xl:h-[400px]"
 					initial={{
 						x: -200,
 						opacity: 0,
@@ -44,12 +45,12 @@ function About({ profile }: Props) {
 					alt="some image"
 				/>
 				<div className=" space-y-10 px-0 md:px-10">
-					<h4 className="relative text-4xl font-semibold md:mt-10 break-all">
+					<h4
+						className="relative text-4xl font-semibold 
+                        md:mt-10 break-all"
+					>
 						{profile.shortBio}
 					</h4>
-					{/* <p className='relative my-auto '>
-                        this is a test message
-                    </p> */}
 					<PortableText value={profile.fullBio} />
 				</div>
 			</div>
