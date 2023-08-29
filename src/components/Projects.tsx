@@ -1,44 +1,56 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-import ProjectCard from './ProjectCard';
-import { ProjectType } from '@/src/types';
+"use client";
+import React, { useCallback, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
+import { ProjectType } from "@/src/types";
 
 type Props = {
-    projects: ProjectType[];
+	projects: ProjectType[];
 };
 
 function Projects({ projects }: Props) {
-    return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            className='pageDiv'
-        >
-            <h3 className='pageTitle'>Projects</h3>
-            <div className='pageContent'>
-                <div className='
-                    relative
-                    grid gap-5 
-                    max-[500px]:grid-cols-1 grid-cols-2 lg:grid-cols-3 
-                    justify-center
-                    pb-10 lg:pb-2
-                '>
-                    {projects.map((project) =>
-                        <ProjectCard
-                            key={project._id}
-                            project={project}
-                        />
-                    )}
-                    <ProjectCard project={projects[0]} />
-                    <ProjectCard project={projects[0]} />
-                    <ProjectCard project={projects[0]} />
-                    <ProjectCard project={projects[0]} />
-                </div>
-            </div>
-        </motion.div>
-    );
+	const [content, setContent] = useState<ProjectType | null>(null);
+	const handleClose = useCallback(() => {
+		setContent(null);
+	}, []);
+
+	return (
+		<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{ duration: 1.5 }}
+			className="pageDiv"
+		>
+			<h3 className="pageTitle">Projects</h3>
+			<div className="pageContent">
+				<div className="projectGrid">
+					{projects.map((project) => (
+						<motion.div
+							onClick={() => content === null && setContent(project)}
+							key={project._id}
+							className="projectCoverContainer"
+							// layoutId={`project-img-container-${project._id}`}
+							layoutId={`project-card-img-container-${project._id}`}
+							// layout
+						>
+							<img
+								src={`${project.logo}`}
+								alt={`${project.slug}`}
+								className="projectCoverImg"
+							/>
+						</motion.div>
+					))}
+				</div>
+				<AnimatePresence>
+					{content && (
+						<motion.div onClick={handleClose} className="projectCardContainer">
+							<ProjectCard project={content} />
+						</motion.div>
+					)}
+				</AnimatePresence>
+			</div>
+		</motion.div>
+	);
 }
 
 export default Projects;
