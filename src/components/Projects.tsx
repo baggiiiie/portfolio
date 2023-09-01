@@ -39,6 +39,11 @@ function Projects({ projects }: Props) {
 						</motion.div>
 					))}
 				</div>
+				<p className="text-gray-500 hover:text-gray-300 transition-all mt-10 text-center font-light text-sm">
+					The card opening effect is achieved with framer motion, double opening
+					a card results in a weird zooming behavior, which hasn't been resolved
+					yet but i really wanna use this effect :(
+				</p>
 				<AnimatePresence>
 					{content && (
 						<motion.div onClick={handleClose} className="projectCardContainer">

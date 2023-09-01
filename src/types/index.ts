@@ -14,7 +14,6 @@ export type ProfileType = {
 	location: string;
 	resumeURL: string;
 	socialLinks: string[];
-	skills: string[];
 };
 
 export type JobType = {

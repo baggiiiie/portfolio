@@ -123,10 +123,14 @@ body {
 	.projectCoverContainer {
 		@apply relative z-0
         bg-gray-500 rounded-lg
-		shadow-xl cursor-pointer;
+		shadow-xl cursor-pointer
+        items-center justify-center text-center
+        max-h-[110px];
 	}
 	.projectCoverImg {
-		@apply rounded-lg;
+		@apply relative 
+        m-auto
+        h-full rounded-lg;
 	}
 	.projectCardContainer {
 		@apply fixed m-auto z-30
@@ -148,8 +152,8 @@ body {
 	}
 	.projectCardImgContainer {
 		@apply relative
-        mx-auto bg-black rounded-t-lg
-        h-[50%] w-full
+        mx-auto rounded-t-lg
+        max-h-[50%] w-full
         /* min-[640px]:landscape:h-full landscape:w-[40%]; */;
 	}
 	.projectCardImg {

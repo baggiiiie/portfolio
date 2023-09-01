@@ -26,8 +26,8 @@ function About({ profile }: Props) {
                 "
 			>
 				<motion.img
-					className="m-auto mb-10 
-                    flex-shrink-0 w-56 h-56 rounded-full
+					className="m-auto mb-10 md:my-auto
+                    flex-shrink-0 w-56 rounded-full
                     object-cover md:rounded-lg md:w-64 md:h-95 
                     xl:w-[400px] xl:h-[400px]"
 					initial={{
@@ -44,10 +44,10 @@ function About({ profile }: Props) {
 					src="sticker.png"
 					alt="some image"
 				/>
-				<div className=" space-y-10 px-0 md:px-10">
+				<div className="space-y-10 px-0 md:pl-10 leading-7 lg:leading-10">
 					<h4
 						className="relative text-4xl font-semibold 
-                        md:mt-10 break-all"
+                        md:mt-10"
 					>
 						{profile.shortBio}
 					</h4>
