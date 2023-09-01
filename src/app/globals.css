@@ -122,19 +122,21 @@ body {
 	}
 	.projectCoverContainer {
 		@apply relative z-0
-        bg-gray-500 rounded-lg
+        bg-gray-500/50 hover:bg-gray-500/80 rounded-lg
 		shadow-xl cursor-pointer
-        items-center justify-center text-center
-        max-h-[110px];
+        max-h-[200px]
+        object-contain;
 	}
 	.projectCoverImg {
 		@apply relative 
         m-auto
-        h-full rounded-lg;
+        w-full h-full 
+        object-cover
+        rounded-lg
+        opacity-80 hover:opacity-100;
 	}
 	.projectCardContainer {
 		@apply fixed m-auto z-30
-        /* bg-white/10 */
         rounded-lg
 		w-full h-full
 		top-0 left-0
@@ -147,14 +149,12 @@ body {
         h-[60vh] w-[80%]
         mt-[20vh] max-w-[400px]
         shadow-lg
-        flex flex-col 
-        /* landscape:flex-row; */;
+        flex flex-col;
 	}
 	.projectCardImgContainer {
 		@apply relative
         mx-auto rounded-t-lg
-        max-h-[50%] w-full
-        /* min-[640px]:landscape:h-full landscape:w-[40%]; */;
+        max-h-[50%] w-full;
 	}
 	.projectCardImg {
 		@apply relative 
@@ -170,7 +170,7 @@ body {
 	}
 	.projectName {
 		@apply font-bold text-white
-        my-2 landscape:m-0;
+        my-2;
 	}
 	.contactInput {
 		@apply outline-none bg-slate-400/10 

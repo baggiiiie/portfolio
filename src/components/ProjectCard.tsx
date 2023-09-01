@@ -2,52 +2,15 @@ import React, { useState } from "react";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import { ProjectType } from "@/src/types";
 import { motion } from "framer-motion";
+import { PortableText } from "@portabletext/react";
 
 type Props = {
 	project: ProjectType;
 };
 
 function ProjectCard({ project }: Props) {
+	console.log(project.description);
 	return (
-		// <motion.div
-		// 	variants={{
-		// 		hidden: {
-		// 			opacity: 0,
-		// 			transition: {
-		// 				duration: 0.5,
-		// 			},
-		// 		},
-		// 		visible: {
-		// 			opacity: 0.8,
-		// 			transition: {
-		// 				delay: 0.04,
-		// 				duration: 0.5,
-		// 			},
-		// 		},
-		// 	}}
-		// 	initial="hidden"
-		// 	exit="hidden"
-		// 	animate="visible"
-		// 	// className="projectCard"
-		// 	className="relative m-auto "
-		// 	// layoutId={`project-container-${project._id}`}
-		// >
-		// 	<motion.div layoutId={`project-img-container-${project._id}`}>
-		// 		<img
-		// 			src={`${project.logo}`}
-		// 			alt={`${project.slug}`}
-		// 			className="projectCardImg h-[50%] rounded-b-none"
-		// 			// layout
-		// 		/>
-		// 	</motion.div>
-		// 	<motion.div className="projectCardText">
-		// 		<p>
-		// 			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi,
-		// 			expedita.
-		// 		</p>
-
-		// 	</motion.div>
-		// </motion.div>
 		<motion.div
 			className="projectCardBackdrop"
 			initial={{ opacity: 0 }}
@@ -65,10 +28,12 @@ function ProjectCard({ project }: Props) {
 			</motion.div>
 			<motion.div className="projectCardTextContainer">
 				<h3 className="projectName">{project.name}</h3>
-				<p className="projectDescription md:hidden">{project.tagline}</p>
+				<p className="projectDescription">{project.tagline}</p>
+				{/* <p className="projectDescription">{project.description}</p> */}
 				<p className="projectDescription hidden md:block">
 					{project.description}
 				</p>
+				{/* <PortableText value={project.description} /> */}
 				<div
 					className="relative 
                     pt-4 mx-auto transition-all ease-in-out duration-300

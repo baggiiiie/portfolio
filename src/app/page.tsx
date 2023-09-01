@@ -27,7 +27,7 @@ const Home = async ({}: Props) => {
 			snap-y  
 			overflow-y-scroll overflow-x-hidden
 			z-0
-			scrollbar scrollbar-track-gray-400/20
+			scrollbar-thin scrollbar-track-gray-400/20
 			scrollbar-thumb-slate-300
             scroll-smooth
     	"

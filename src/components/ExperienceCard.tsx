@@ -45,8 +45,8 @@ function ExperienceCard({ job }: Props) {
                         />
                     </div> */}
 					<ul className="list-disc space-y-1 ml-5 text-sm md:text-base">
-						{bulletPoints.map((point) => (
-							<li>{point}</li>
+						{bulletPoints.map((point, i) => (
+							<li key={i}>{point}</li>
 						))}
 					</ul>
 				</div>
