@@ -27,23 +27,20 @@ function ProjectCard({ project }: Props) {
 				/>
 			</motion.div>
 			<motion.div className="projectCardTextContainer">
-				<h3 className="projectName">{project.name}</h3>
-				<p className="projectDescription">{project.tagline}</p>
-				{/* <p className="projectDescription">{project.description}</p> */}
-				<p className="projectDescription hidden md:block">
-					{project.description}
-				</p>
-				{/* <PortableText value={project.description} /> */}
+				<h3 className="font-bold text-lg my-2 ">{project.name}</h3>
+				<p className="font-light text-base">{project.description}</p>
 				<div
 					className="relative 
                     pt-4 mx-auto transition-all ease-in-out duration-300
                     w-[50%] text-center text-white/40  hover:text-white"
 				>
-					<span className="inline pr-1">Have a look</span>
-					<ArrowRightCircleIcon
-						className="inline w-5"
-						href={project.projectUrl}
-					/>
+					<a href={project.projectUrl}>
+						<span className="inline pr-1">Have a look</span>
+						<ArrowRightCircleIcon
+							className="inline w-5"
+							href={project.projectUrl}
+						/>
+					</a>
 				</div>
 			</motion.div>
 		</motion.div>

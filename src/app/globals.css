@@ -94,8 +94,8 @@ body {
 		w-[45vw] md:w-[35vw] max-w-[300px]
         my-5
 		transition-all duration-500
-		bg-[#5e5e5e] 
-        rounded-xl
+		bg-[#403f3f] 
+        rounded-xl shadow-xl
   		[transform-style:preserve-3d] 
 		group-hover:[transform:rotateY(180deg)];
 	}
@@ -122,7 +122,7 @@ body {
 	}
 	.projectCoverContainer {
 		@apply relative z-0
-        bg-gray-500/50 hover:bg-gray-500/80 rounded-lg
+        bg-gray-700/50 hover:bg-gray-700/80 rounded-lg
 		shadow-xl cursor-pointer
         max-h-[200px]
         object-contain;
@@ -137,40 +137,37 @@ body {
 	}
 	.projectCardContainer {
 		@apply fixed m-auto z-30
-        rounded-lg
+        rounded-lg shadow-xl
 		w-full h-full
 		top-0 left-0
+        bg-black/40
         cursor-pointer;
 	}
 	.projectCardBackdrop {
 		@apply relative m-auto
-        rounded-xl
-        bg-gray-500
-        h-[60vh] w-[80%]
-        mt-[20vh] max-w-[400px]
-        shadow-lg
+        rounded-xl shadow-2xl
+        bg-[rgb(47,47,47)]
+        h-[70vh] sm:h-[64vh]
+        mt-[15vh] sm:mt-[18vh]
+        max-w-[550px] w-[80%]
         flex flex-col;
 	}
 	.projectCardImgContainer {
 		@apply relative
         mx-auto rounded-t-lg
-        max-h-[50%] w-full;
+        max-h-[40%] w-full
+        object-cover;
 	}
 	.projectCardImg {
 		@apply relative 
 		h-full w-full m-auto
-		rounded-t-lg object-contain;
+		rounded-t-lg;
 	}
 	.projectCardTextContainer {
 		@apply relative
-        p-5
-        text-white
+        p-8
 		md:text-center
         items-center justify-center;
-	}
-	.projectName {
-		@apply font-bold text-white
-        my-2;
 	}
 	.contactInput {
 		@apply outline-none bg-slate-400/10 
