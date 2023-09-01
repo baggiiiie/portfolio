@@ -121,8 +121,8 @@ body {
         pb-10 lg:pb-2;
 	}
 	.projectCoverContainer {
-		@apply relative z-0
-        bg-gray-700/50 hover:bg-gray-700/80 rounded-lg
+		@apply relative z-0 rounded-lg
+        bg-[rgb(47,47,47)]/50 hover:bg-[rgb(47,47,47)]
 		shadow-xl cursor-pointer
         max-h-[200px]
         object-contain;
