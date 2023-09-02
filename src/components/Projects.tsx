@@ -29,8 +29,8 @@ function Projects({ projects }: Props) {
 							onClick={() => content === null && setContent(project)}
 							key={project._id}
 							className="projectCoverContainer"
-							layoutId={`project-card-container-${project._id}`}
-							// layoutId={`project-card-img-container-${project._id}`}
+							// layoutId={`project-card-container-${project._id}`}
+							layoutId={`project-card-img-container-${project._id}`}
 						>
 							<img
 								src={`${project.logo}`}
@@ -50,8 +50,8 @@ function Projects({ projects }: Props) {
 						<>
 							<motion.div
 								onClick={handleClose}
-								layoutId={`project-card-container-${content._id}`}
 								className="projectCardContainer"
+								layoutId={`project-card-container-${content._id}`}
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								exit={{ opacity: 0 }}

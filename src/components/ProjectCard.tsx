@@ -15,11 +15,16 @@ function ProjectCard({ project }: Props) {
 			className="projectCardBackdrop"
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			exit={{ opacity: 0, transition: { duration: 0.15 } }}
-			transition={{ duration: 0.2, delay: 0.15 }}
-			layoutId={`project-card-img-container-${project._id}`}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.2 }}
 		>
-			<motion.div className="projectCardImgContainer">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				className="projectCardImgContainer"
+				layoutId={`project-card-img-container-${project._id}`}
+			>
 				<img
 					src={`${project.logo}`}
 					alt={`${project.slug}`}

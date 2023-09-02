@@ -147,6 +147,7 @@ body {
 		@apply relative m-auto
         rounded-xl shadow-2xl
         bg-[rgb(47,47,47)]
+        /* w-[300px] h-[300px] */
         h-[70vh] sm:h-[64vh]
         mt-[15vh] sm:mt-[18vh]
         max-w-[550px] w-[80%]
@@ -155,7 +156,8 @@ body {
 	.projectCardImgContainer {
 		@apply relative
         mx-auto rounded-t-lg
-        max-h-[40%] w-full
+        max-h-[40%] 
+        w-full
         object-cover;
 	}
 	.projectCardImg {
