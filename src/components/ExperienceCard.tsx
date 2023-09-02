@@ -44,7 +44,7 @@ function ExperienceCard({ job }: Props) {
                             src="sticker.png" alt="Skills Picture"
                         />
                     </div> */}
-					<ul className="list-disc space-y-1 ml-5 text-sm md:text-base">
+					<ul className="list-disc space-y-1 ml-5 max-[400px]:text-xs leading-5 text-sm md:text-base">
 						{bulletPoints.map((point, i) => (
 							<li key={i}>{point}</li>
 						))}

@@ -91,11 +91,12 @@ body {
 	.experienceCard {
 		@apply relative m-auto
 		h-[50vh] min-h-[400px]
-		w-[45vw] md:w-[35vw] max-w-[300px]
+		w-[55vw] md:w-[35vw] max-w-[300px]
         my-5
 		transition-all duration-500
 		bg-[#403f3f] 
         rounded-xl shadow-xl
+        /* overflow-y-hidden */
   		[transform-style:preserve-3d] 
 		group-hover:[transform:rotateY(180deg)];
 	}
@@ -153,13 +154,15 @@ body {
         h-[70vh] sm:h-[64vh]
         mt-[15vh] sm:mt-[18vh]
         max-w-[550px] w-[80%]
+        overflow-y-scroll scrollbar-none
         flex flex-col;
 	}
 	.projectCardImgContainer {
 		@apply relative
         mx-auto rounded-t-lg
-        max-h-[40%] 
+        max-h-[40%] min-h-[150px]
         w-full
+        bg-[rgb(57,57,57)]
         object-cover;
 	}
 	.projectCardImg {
