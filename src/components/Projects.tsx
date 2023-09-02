@@ -3,6 +3,7 @@ import React, { useCallback, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { ProjectType } from "@/src/types";
+import project from "../schemas/project";
 
 type Props = {
 	projects: ProjectType[];
@@ -29,55 +30,61 @@ function Projects({ projects }: Props) {
 							onClick={() => content === null && setContent(project)}
 							key={project._id}
 							className="projectCoverContainer"
-							// layoutId={`project-card-container-${project._id}`}
-							layoutId={`project-card-img-container-${project._id}`}
+							layoutId={`project-card-container-${project._id}`}
 						>
-							<img
-								src={`${project.logo}`}
-								alt={`${project.slug}`}
-								className="projectCoverImg"
-							/>
+							<motion.div
+								layoutId={`project-img-container-${project._id}`}
+								animate={{ y: 1 }}
+								className="projectCoverImgContainer"
+							>
+								<img
+									src={`${project.logo}`}
+									alt={`${project.slug}`}
+									className="projectCoverImg"
+								/>
+							</motion.div>
 						</motion.div>
 					))}
 				</div>
-				<p className="text-gray-500 hover:text-gray-300 transition-all duration-300 mt-10 text-center font-light text-sm">
+				{/* <p className="text-gray-500 hover:text-gray-300 transition-all duration-300 mt-10 text-center font-light text-sm">
 					The card opening effect is achieved with framer motion, double opening
 					a card results in a weird zooming behavior, which hasn't been resolved
 					yet but i really wanna use this effect :(
-				</p>
+				</p> */}
+				{/* <motion.div
+					layoutId="card-container"
+					className="bg-black"
+					onClick={() => setContent(projects[0])}
+					animate={{ opacity: 1, y: 1 }}
+				>
+					<motion.div layoutId="img-container">
+						<motion.img layoutId="img" src="sticker.png" alt="" />
+					</motion.div>
+				</motion.div> */}
 				<AnimatePresence>
 					{content && (
 						<>
-							<motion.div
+							{/* <motion.div
+								layoutId="card-container"
+								className=" fixed top-0 bg-black w-[300px] h-[300px]"
 								onClick={handleClose}
-								className="projectCardContainer"
-								layoutId={`project-card-container-${content._id}`}
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								exit={{ opacity: 0 }}
+								animate={{ opacity: 1, y: 1 }}
 							>
+								<motion.div
+									layoutId="img-container"
+									className="relative object-cover"
+								>
+									<motion.img
+										layoutId="img"
+										src="sticker.png"
+										alt=""
+										className=" h-[150px]"
+									/>
+								</motion.div>
+							</motion.div> */}
+							<motion.div onClick={handleClose} className="projectCardBackdrop">
 								<ProjectCard project={content} />
 							</motion.div>
-							{/* <motion.div
-								variants={{
-									hidden: {
-										opacity: 0,
-										transition: {
-											duration: 0.16,
-										},
-									},
-									visible: {
-										opacity: 0.8,
-										transition: {
-											delay: 0.04,
-											duration: 0.2,
-										},
-									},
-								}}
-								initial="hidden"
-								exit="hidden"
-								animate="visible"
-							/> */}
 						</>
 					)}
 				</AnimatePresence>

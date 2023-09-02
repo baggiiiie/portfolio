@@ -124,8 +124,11 @@ body {
 		@apply relative z-0 rounded-lg
         bg-[rgb(47,47,47)]/50 hover:bg-[rgb(47,47,47)]
 		shadow-xl cursor-pointer
-        max-h-[200px]
-        object-contain;
+        max-h-[200px];
+	}
+	.projectCoverImgContainer {
+		@apply w-full h-full
+        object-cover;
 	}
 	.projectCoverImg {
 		@apply relative 
@@ -135,7 +138,7 @@ body {
         rounded-lg
         opacity-80 hover:opacity-100;
 	}
-	.projectCardContainer {
+	.projectCardBackdrop {
 		@apply fixed m-auto z-30
         rounded-lg shadow-xl
 		w-full h-full
@@ -143,7 +146,7 @@ body {
         bg-black/40
         cursor-pointer;
 	}
-	.projectCardBackdrop {
+	.projectCardContainer {
 		@apply relative m-auto
         rounded-xl shadow-2xl
         bg-[rgb(47,47,47)]

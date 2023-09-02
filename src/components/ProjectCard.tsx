@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import { ProjectType } from "@/src/types";
 import { motion } from "framer-motion";
-import { PortableText } from "@portabletext/react";
 
 type Props = {
 	project: ProjectType;
@@ -12,18 +11,14 @@ function ProjectCard({ project }: Props) {
 	console.log(project.description);
 	return (
 		<motion.div
-			className="projectCardBackdrop"
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			transition={{ duration: 0.2 }}
+			className="projectCardContainer"
+			animate={{ y: 1 }}
+			layoutId={`project-card-container-${project._id}`}
 		>
 			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
+				animate={{ y: 1 }}
 				className="projectCardImgContainer"
-				layoutId={`project-card-img-container-${project._id}`}
+				layoutId={`project-img-container-${project._id}`}
 			>
 				<img
 					src={`${project.logo}`}
