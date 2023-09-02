@@ -127,8 +127,7 @@ body {
         max-h-[200px];
 	}
 	.projectCoverImgContainer {
-		@apply w-full h-full
-        object-cover;
+		@apply w-full h-full;
 	}
 	.projectCoverImg {
 		@apply relative 

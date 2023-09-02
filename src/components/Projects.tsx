@@ -34,7 +34,6 @@ function Projects({ projects }: Props) {
 						>
 							<motion.div
 								layoutId={`project-img-container-${project._id}`}
-								animate={{ y: 1 }}
 								className="projectCoverImgContainer"
 							>
 								<img
@@ -46,11 +45,11 @@ function Projects({ projects }: Props) {
 						</motion.div>
 					))}
 				</div>
-				{/* <p className="text-gray-500 hover:text-gray-300 transition-all duration-300 mt-10 text-center font-light text-sm">
+				<p className="text-gray-500 hover:text-gray-300 transition-all duration-300 mt-10 text-center font-light text-sm">
 					The card opening effect is achieved with framer motion, double opening
-					a card results in a weird zooming behavior, which hasn't been resolved
-					yet but i really wanna use this effect :(
-				</p> */}
+					a card results in a weird glitching behavior of the image, which
+					hasn't been resolved :(
+				</p>
 				{/* <motion.div
 					layoutId="card-container"
 					className="bg-black"
@@ -82,7 +81,14 @@ function Projects({ projects }: Props) {
 									/>
 								</motion.div>
 							</motion.div> */}
-							<motion.div onClick={handleClose} className="projectCardBackdrop">
+							<motion.div
+								onClick={handleClose}
+								className="projectCardBackdrop"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+								transition={{ duration: 0.2 }}
+							>
 								<ProjectCard project={content} />
 							</motion.div>
 						</>

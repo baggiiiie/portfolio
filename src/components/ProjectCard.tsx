@@ -8,17 +8,17 @@ type Props = {
 };
 
 function ProjectCard({ project }: Props) {
-	console.log(project.description);
 	return (
 		<motion.div
 			className="projectCardContainer"
-			animate={{ y: 1 }}
 			layoutId={`project-card-container-${project._id}`}
+			animate={{ y: 1 }}
+			transition={{ duration: 0.1 }}
 		>
 			<motion.div
-				animate={{ y: 1 }}
 				className="projectCardImgContainer"
 				layoutId={`project-img-container-${project._id}`}
+				transition={{ duration: 0.1 }}
 			>
 				<img
 					src={`${project.logo}`}
