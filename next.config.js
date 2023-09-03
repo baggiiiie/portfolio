@@ -10,10 +10,10 @@ const nextConfig = {
 					has: [
 						{
 							type: "host",
-							value: "netflix.yingchaoooo.me",
+							value: "project1.yingchaoooo.me",
 						},
 					],
-					destination: "/netflix/:path*",
+					destination: "/project1/:path*",
 				},
 			],
 		};
