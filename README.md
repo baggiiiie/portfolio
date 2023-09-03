@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), currently hosted on my own [domain](https://yingchaoooo.me/). Feel free to go have a look!
 
-## Getting Started
+## What's it about
+This project is a personal portfolio to showcase skills on frontend development, and to show my past experiences and projects, and really, just have a proper website for myself.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## What's inside
+The project utilizes React, Next.js, tailwindcss for CSS, Sanity for CMS. 
+Framer Motion is used to create animations and some other packages such as typewriter and icons to make the website just a bit nicer.
 
 ## Deploy on Vercel
+As it's a Next.js app, it's deployed on Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Others
+Well, the thing about portfolio website is, I personally think it's definitely a good idea to have one. But while building your own portfolio websire, you tend to spend more time on CSS to make the website visually pleasing - it's your own website you'd want it to look nice wouldn't you.
+But spending too much time on CSS doesn't really provides more skill growth after some extend. And a poorly designed website is gonna reflect poorly on our skills, even though you build the entire website from scratch all by yourself!
+Anyways, it's a good learning experience!
