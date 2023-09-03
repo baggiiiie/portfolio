@@ -10,8 +10,6 @@ The project
 - employs Sanity for CMS;
 - uses Framer Motion for animations and
 - includes other packages such as typewriter and icons to make the website just a bit nicer.
-
-## Deploy on Vercel
 As it's a Next.js app, it's deployed on Vercel.
 
 ## Others
