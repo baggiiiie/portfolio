@@ -4,8 +4,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 This project is a personal portfolio to showcase skills on frontend development, and to show my past experiences and projects, and really, just have a proper website for myself.
 
 ## What's inside
-The project utilizes React, Next.js, tailwindcss for CSS, Sanity for CMS. 
-Framer Motion is used to create animations and some other packages such as typewriter and icons to make the website just a bit nicer.
+The project 
+- is built wth React, Next.js;
+- utilizes tailwindcss for CSS;
+- employs Sanity for CMS;
+- uses Framer Motion for animations and
+- includes other packages such as typewriter and icons to make the website just a bit nicer.
 
 ## Deploy on Vercel
 As it's a Next.js app, it's deployed on Vercel.
