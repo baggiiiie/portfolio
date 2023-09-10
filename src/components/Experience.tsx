@@ -22,8 +22,6 @@ function Experience({ jobs }: Props) {
 					{jobs.map((job) => (
 						<ExperienceCard key={job._id} job={job} />
 					))}
-					<ExperienceCard job={jobs[1]} />
-					<ExperienceCard job={jobs[1]} />
 				</div>
 			</div>
 		</motion.div>

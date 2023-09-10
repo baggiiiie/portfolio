@@ -13,28 +13,27 @@ function ExperienceCard({ job }: Props) {
 		<article className="group experienceCardContainer">
 			<div className="experienceCard">
 				<div className="experienceCardFront">
-					<motion.img
-						initial={{ y: -50, opacity: 0 }}
-						transition={{ duration: 1.5 }}
-						// animate={{ opacity: 1, y: 0 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						// viewport={{ once: true }}
-						className="
-                        mx-auto
-                        object-cover object-center
-                        justify-center"
-						src={`${job.logo}`}
-						alt={`${job.name}`}
-					/>
+					<div className="relative h-[20%] sm:h-[35%] items-center justify-center flex">
+						<motion.img
+							initial={{ y: -50, opacity: 0 }}
+							transition={{ duration: 1.5 }}
+							// animate={{ opacity: 1, y: 0 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							// viewport={{ once: true }}
+							className="relative m-auto rounded-lg"
+							src={`${job.logo}`}
+							alt={`${job.name}`}
+						/>
+					</div>
 					<h4 className="font-bold text-gray-300 text-lg sm:text-xl md:text-2xl">
 						{job.jobTitle}
 					</h4>
 					<p className="font-light text-gray-300 text-base sm:text-lg md:text-xl mt-2 ">
 						{job.name}
 					</p>
-					<p className="uppercase py-5 text-gray-400 text-sm md:text-base lg:text-lg">
-						Started {job.startDate.toString()} <br />
-						Ended {job.endDate.toString()}
+					<p className="py-5 text-gray-400 text-sm md:text-base lg:text-lg">
+						Started {job.startDate.toString().slice(0, 7)} <br />
+						Ended {job.endDate.toString().slice(0, 7)}
 					</p>
 				</div>
 				<div className="experienceCardBack">
