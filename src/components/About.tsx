@@ -14,12 +14,12 @@ function About({ profile }: Props) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className="pageDiv"
+			className="pageDiv space-y-0"
 		>
-			<h3 className="pageTitle md:mt-0">About</h3>
+			<h3 className="pageTitle">About</h3>
 			<div
 				className="
-                pageContent
+                pageContent mt-0
                 flex flex-col
                 md:flex-row
                 text-center md:text-left
@@ -51,7 +51,9 @@ function About({ profile }: Props) {
 					>
 						{profile.shortBio}
 					</h4>
-					<PortableText value={profile.fullBio} />
+					<div className="space-y-5">
+						<PortableText value={profile.fullBio} />
+					</div>
 				</div>
 			</div>
 		</motion.div>
