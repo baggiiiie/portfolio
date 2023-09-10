@@ -43,6 +43,7 @@ export async function getProjects() {
       _id, 
       name,
       projectUrl,
+      githubUrl,
       description,
       "slug": slug.current,
       tagline,

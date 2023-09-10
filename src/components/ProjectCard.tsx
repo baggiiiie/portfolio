@@ -30,17 +30,34 @@ function ProjectCard({ project }: Props) {
 				<h3 className="font-bold text-lg my-2 ">{project.name}</h3>
 				<p className="font-light text-base">{project.description}</p>
 				<div
-					className="relative 
-                    pt-4 mx-auto transition-all ease-in-out duration-300
-                    w-[50%] text-center text-white/40  hover:text-white"
+					className="relative flex flex-col space-y-3
+                    pt-4 min-w-[150px] text-center mx-auto 
+                    "
 				>
-					<a href={project.projectUrl}>
-						<span className="inline pr-1">Have a look</span>
-						<ArrowRightCircleIcon
-							className="inline w-5"
-							href={project.projectUrl}
-						/>
-					</a>
+					<div
+						className="transition-all ease-in-out duration-300
+                     text-white/40  hover:text-white"
+					>
+						<a href={project.projectUrl}>
+							<span className="inline pr-1">Have a look</span>
+							<ArrowRightCircleIcon
+								className="inline w-5"
+								href={project.projectUrl}
+							/>
+						</a>
+					</div>
+					<div
+						className="transition-all ease-in-out duration-300
+                     text-white/40  hover:text-white"
+					>
+						<a href={project.githubUrl}>
+							<span className="inline pr-1">GitHub</span>
+							<ArrowRightCircleIcon
+								className="inline w-5"
+								href={project.githubUrl}
+							/>
+						</a>
+					</div>
 				</div>
 			</motion.div>
 		</motion.div>

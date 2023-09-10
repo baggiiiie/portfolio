@@ -22,30 +22,33 @@ function Contact({}: Props) {
 	return (
 		<div className="pageDiv">
 			<h3 className="pageTitle">Contact</h3>
-			<div className="m-auto flex flex-col space-y-10 pageContent justify-start">
+			<div className="m-auto flex flex-col space-y-5 pageContent justify-start">
 				<h4 className="text-4xl font-semibold text-center">
 					Drop a&nbsp;
 					<span className=" decoration-gray-100/50 underline">message</span>
 					&nbsp;here
 				</h4>
-				<div className="space-y-10 w-3/4">
+				<div className="space-y-1 w-3/4">
 					<div className="flex items-center space-x-5 justify-center">
-						<EnvelopeIcon className="text-gray-100/50 h-7 w-7 animate-pulse" />
+						<EnvelopeIcon className="text-white h-7 w-7 animate-pulse" />
 						<p className="text-2x1">Message is sent via email</p>
+					</div>
+					<div className="flex items-center space-x-5 justify-center">
+						<MapPinIcon className="text-white h-7 w-7 animate-pulse" />
+						<p className="text-2x1">Singapore / China</p>
 					</div>
 					<form
 						onSubmit={handleSubmit(onSubmit)}
 						className="
                         flex flex-col space-y-2 
-                        w-full mx-auto justify-center
-                    "
+                        w-full mx-auto justify-center "
 					>
 						<div
 							className="
                             flex flex-col space-y-2
                             md:flex-row md:space-x-2 md:space-y-0
                             justify-center items-stretch
-                        "
+                            mt-5 "
 						>
 							<input
 								{...register("firstname")}
