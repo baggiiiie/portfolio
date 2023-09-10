@@ -27,7 +27,9 @@ export default function Hero({ profile }: Props) {
 		>
 			<BackgroundCircle />
 			<img
-				className="relative rounded-full h-20 w-20 mx-auto object-cover"
+				className="relative rounded-full 
+                h-32 w-32
+                mx-auto object-cover"
 				src="sticker2.png"
 				alt="Welcome Image"
 			/>

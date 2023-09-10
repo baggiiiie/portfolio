@@ -13,7 +13,7 @@ function ExperienceCard({ job }: Props) {
 		<article className="group experienceCardContainer">
 			<div className="experienceCard">
 				<div className="experienceCardFront">
-					<div className="relative h-[20%] sm:h-[35%] items-center justify-center flex">
+					<div className="relative h-[30%] sm:h-[35%] items-center justify-center flex">
 						<motion.img
 							initial={{ y: -50, opacity: 0 }}
 							transition={{ duration: 1.5 }}
