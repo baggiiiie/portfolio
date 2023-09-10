@@ -41,8 +41,8 @@ function About({ profile }: Props) {
 						x: 0,
 						opacity: 1,
 					}}
-					src="sticker.png"
-					alt="some image"
+					src={`${profile.profileImage}`}
+					alt="profile image"
 				/>
 				<div className="space-y-10 px-0 md:pl-10 leading-7 lg:leading-10">
 					<h4
