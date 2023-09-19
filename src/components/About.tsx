@@ -41,8 +41,8 @@ function About({ profile }: Props) {
 						x: 0,
 						opacity: 1,
 					}}
-					src={`${profile.profileImage}`}
-					alt="profile image"
+					src={`${profile.profileImage.image}`}
+					alt={`${profile.profileImage.alt}`}
 				/>
 				<div className="space-y-10 px-0 md:pl-10 leading-7 lg:leading-10">
 					<h4
