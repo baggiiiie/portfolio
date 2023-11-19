@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/20/solid";
+import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { ProfileType } from "@/src/types";
 
 type Inputs = {
 	firstname: string;
@@ -10,9 +11,11 @@ type Inputs = {
 	message: string;
 };
 
-type Props = {};
+type Props = {
+	profile: ProfileType;
+};
 
-function Contact({}: Props) {
+function Contact({ profile }: Props) {
 	const { register, handleSubmit } = useForm<Inputs>();
 	const onSubmit: SubmitHandler<Inputs> = (data) => {
 		window.location.href = `mailto:yingchao.dai22@gmail.com?subject=${data.firstname}
@@ -35,7 +38,7 @@ function Contact({}: Props) {
 					</div>
 					<div className="flex items-center space-x-5 justify-center">
 						<MapPinIcon className="text-white h-7 w-7 animate-pulse" />
-						<p className="text-2x1">Singapore / China</p>
+						<p className="text-2x1">{profile.location}</p>
 					</div>
 					<form
 						onSubmit={handleSubmit(onSubmit)}

@@ -56,7 +56,7 @@ const Home = async ({}: Props) => {
 			</section>
 
 			<section id="contact" className="individualPage">
-				<Contact />
+				<Contact profile={profile} />
 			</section>
 			{/* <Link href='#hero'>
 				<footer className='sticky bottom-5 cursor-pointer'>
