@@ -66,9 +66,9 @@ export default function Hero({ profile }: Props) {
 					<button className="heroButton" onClick={() => handleClick("contact")}>
 						Contact
 					</button>
-					<button className="heroButton">
-						<a href="/blog">Blog</a>
-					</button>
+					<a href="/blog">
+						<button className="heroButton">Blog</button>
+					</a>
 				</div>
 			</div>
 		</div>
