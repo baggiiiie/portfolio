@@ -3,6 +3,7 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircle from "./BackgroundCircle";
 import { ProfileType } from "@/src/types";
+import { useNavigate, Link } from "react-router-dom";
 
 type Props = {
 	profile: ProfileType;
@@ -65,8 +66,8 @@ export default function Hero({ profile }: Props) {
 					<button className="heroButton" onClick={() => handleClick("contact")}>
 						Contact
 					</button>
-					<button className="heroButton" onClick={() => handleClick("contact")}>
-						Blog
+					<button className="heroButton">
+						<a href="/blog">Blog</a>
 					</button>
 				</div>
 			</div>
