@@ -42,18 +42,17 @@ const Home = async ({}: Props) => {
 				<About profile={profile} />
 			</section>
 
-			<section id="experiences" className="individualPage">
+			{/* <section id="experiences" className="individualPage">
 				<Experience jobs={jobs} />
-				{/* <Experience /> */}
-			</section>
+			</section> */}
 
 			{/* <section id='skills' className='individualPage'>
 				<Skills />
 			</section> */}
 
-			<section id="projects" className="individualPage">
+			{/* <section id="projects" className="individualPage">
 				<Projects projects={projects} />
-			</section>
+			</section> */}
 
 			<section id="contact" className="individualPage">
 				<Contact profile={profile} />
