@@ -1,8 +1,17 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { getSortedPostsData } from '../lib/posts';
 
-const BlogPage: React.FC = () => {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+const BlogPage: React.FC = ({ allPostsData }:any) => {
 	return (
 		// page div
 		<div
@@ -27,6 +36,11 @@ const BlogPage: React.FC = () => {
 				{/* content div */}
 				<div className="px-20">
 					{/* individual blog div */}
+					
+					{allPostsData.map(( { id, date, title } )) => (
+					<p>{id}</p>
+					)}
+
 					<Link href="/blog/blog-1">
 						<div className="flex justify-between hover:underline hover:bg-blue-100 px-4 hover:cursor-pointer">
 							<p className="">This is a test for blog title</p>
