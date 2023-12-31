@@ -50,7 +50,7 @@ export default function Hero({ profile }: Props) {
 					<button className="heroButton" onClick={() => handleClick("about")}>
 						About
 					</button>
-					<button
+					{/* <button
 						className="heroButton"
 						onClick={() => handleClick("experiences")}
 					>
@@ -61,9 +61,12 @@ export default function Hero({ profile }: Props) {
 						onClick={() => handleClick("projects")}
 					>
 						Projects
-					</button>
+					</button> */}
 					<button className="heroButton" onClick={() => handleClick("contact")}>
 						Contact
+					</button>
+					<button className="heroButton" onClick={() => handleClick("contact")}>
+						Blog
 					</button>
 				</div>
 			</div>
