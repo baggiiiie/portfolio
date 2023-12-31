@@ -42,6 +42,5 @@ next-env.d.ts
 
 /.vercel
 /.github
-/.eslintrc.json
 
 /.env

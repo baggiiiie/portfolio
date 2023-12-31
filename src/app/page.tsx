@@ -6,6 +6,7 @@ import Projects from "@/src/components/Projects";
 import Contact from "@/src/components/Contact";
 import { getJobs, getProfile, getProjects } from "@/src/sanity/sanity.query";
 import { JobType, ProfileType, ProjectType } from "@/src/types";
+import { getSortedPostsData } from "./lib/posts";
 
 type Props = {
 	// profiles: ProfileType[];
