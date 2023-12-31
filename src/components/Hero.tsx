@@ -10,9 +10,6 @@ type Props = {
 };
 
 export default function Hero({ profile }: Props) {
-	function handleClick(id: any) {
-		document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-	}
 
 	const [text, count] = useTypewriter({
 		words: ["So you've found my website", "Welcome", "Have a look around"],
@@ -48,24 +45,12 @@ export default function Hero({ profile }: Props) {
 					<Cursor />
 				</h1>
 				<div className="pt-5">
-					<button className="heroButton" onClick={() => handleClick("about")}>
-						About
-					</button>
-					{/* <button
-						className="heroButton"
-						onClick={() => handleClick("experiences")}
-					>
-						Experiences
-					</button>
-					<button
-						className="heroButton"
-						onClick={() => handleClick("projects")}
-					>
-						Projects
-					</button> */}
-					<button className="heroButton" onClick={() => handleClick("contact")}>
-						Contact
-					</button>
+					<Link href="#about">
+						<button className="heroButton">About</button>
+					</Link>
+					<Link href="#contact">
+						<button className="heroButton">Contact</button>
+					</Link>
 					<Link href="./blog">
 						<button className="heroButton">Blog</button>
 					</Link>
