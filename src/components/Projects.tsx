@@ -47,8 +47,8 @@ function Projects({ projects }: Props) {
 				</div>
 				<p className="text-gray-500 hover:text-gray-300 transition-all duration-300 mt-10 text-center font-light text-sm">
 					The card opening effect is achieved with framer motion, double opening
-					a card results in a weird glitching behavior of the image, which
-					hasn't been resolved :(
+					a card results in a weird glitching behavior of the image, which has
+					not been resolved :(
 				</p>
 				{/* <motion.div
 					layoutId="card-container"
