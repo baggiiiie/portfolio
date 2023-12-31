@@ -3,7 +3,7 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircle from "./BackgroundCircle";
 import { ProfileType } from "@/src/types";
-import { useNavigate, Link } from "react-router-dom";
+import Link from "next/link";
 
 type Props = {
 	profile: ProfileType;
@@ -66,9 +66,9 @@ export default function Hero({ profile }: Props) {
 					<button className="heroButton" onClick={() => handleClick("contact")}>
 						Contact
 					</button>
-					<a href="/blog">
+					<Link href="./blog">
 						<button className="heroButton">Blog</button>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

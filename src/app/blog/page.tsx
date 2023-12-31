@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+
 const BlogPage: React.FC = () => {
 	return (
 		// page div
@@ -25,12 +27,12 @@ const BlogPage: React.FC = () => {
 				{/* content div */}
 				<div className="px-20">
 					{/* individual blog div */}
-					<a href="/blog/blog-1">
+					<Link href="/blog/blog-1">
 						<div className="flex justify-between hover:underline hover:bg-blue-100 px-4 hover:cursor-pointer">
 							<p className="">This is a test for blog title</p>
 							<p>2023/12/31</p>
 						</div>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>
