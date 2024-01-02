@@ -18,6 +18,15 @@ const nextConfig = {
 			],
 		};
 	},
+	async redirects() {
+		return [
+		  {
+			source: '/blog',
+			destination: 'https://blog.yingchaoooo.me',
+			permanent: false
+		  }
+		];
+	},
 };
 
 module.exports = nextConfig;

@@ -51,7 +51,7 @@ export default function Hero({ profile }: Props) {
 					<Link href="#contact">
 						<button className="heroButton">Contact</button>
 					</Link>
-					<Link href="./blog">
+					<Link href="/blog">
 						<button className="heroButton">Blog</button>
 					</Link>
 				</div>
