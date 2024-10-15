@@ -4,6 +4,9 @@ import About from "@/src/components/About";
 import Experience from "@/src/components/Experience";
 import Projects from "@/src/components/Projects";
 import Contact from "@/src/components/Contact";
+
+import { Analytics } from "@vercel/analytics/react";
+
 import { getJobs, getProfile, getProjects } from "@/src/sanity/sanity.query";
 import { JobType, ProfileType, ProjectType } from "@/src/types";
 
@@ -66,6 +69,8 @@ const Home = async ({}: Props) => {
 					</div>
 				</footer>
 			</Link> */}
+			<Analytics />
+
 		</main>
 	);
 };
